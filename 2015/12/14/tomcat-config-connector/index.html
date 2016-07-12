@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="tomcat8," />
 
 
 
@@ -84,15 +84,34 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="介绍
+
+每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。
+属性
+
+公用属性
+所有类型connector都支持">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tomcat8 server.xml 标签connector 配置说明">
+<meta property="og:url" content="http://yoursite.com/2015/12/14/tomcat-config-connector/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="介绍
+
+每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。
+属性
+
+公用属性
+所有类型connector都支持">
+<meta property="og:updated_time" content="2016-01-11T10:29:49.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="tomcat8 server.xml 标签connector 配置说明">
+<meta name="twitter:description" content="介绍
+
+每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。
+属性
+
+公用属性
+所有类型connector都支持">
 
 
 
@@ -113,9 +132,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2015/12/14/tomcat-config-connector/"/>
 
-  <title> Hexo </title>
+  <title> tomcat8 server.xml 标签connector 配置说明 | Hexo </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -136,9 +155,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -215,9 +232,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -237,112 +254,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/06/25/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-06-25T14:55:18+08:00" content="2016-06-25">
-              2016-06-25
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/14/tomcat-config-connector/" itemprop="url">
-                  tomcat8 server.xml 标签connector 配置说明
-                </a>
+                tomcat8 server.xml 标签connector 配置说明
               
             
           </h1>
@@ -382,9 +294,7 @@
       
 
       
-        
-          
-            <h1 id="hr11">介绍</h1>
+        <h1 id="hr11">介绍</h1>
 
 <p>每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。<br></p>
 <h1 id="hr12">属性</h1>
@@ -409,36 +319,59 @@
 
 <p></p><h2 id="hr28">连接器比较</h2><br>    下面是一个小图表,显示了连接器不同。<p></p>
 <table class="defaultTable" style="text-align: center;"><br>      <tbody><tr><br>        <th></th><br>        <th>Java Blocking 连接器<br>BIO</th><br>        <th>Java Nio 连接器<br>NIO</th><br>        <th>Java Nio2 连接器<br>NIO2</th><br>        <th>APR/native 连接器<br>APR</th><br>      </tr><br>      <tr><br>        <th style="text-align: left;">类</th><br>        <td><code class="noHighlight">Http11Protocol</code></td><br>        <td><code class="noHighlight">Http11NioProtocol</code></td><br>        <td><code class="noHighlight">Http11Nio2Protocol</code></td><br>        <td><code class="noHighlight">Http11AprProtocol</code></td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">Tomcat 开始支持的版本</th><br>        <td>3.x </td><br>        <td>6.x </td><br>        <td>8.x </td><br>        <td>5.5.x </td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">支持轮询</th><br>        <td>NO</td><br>        <td>YES</td><br>        <td>YES</td><br>        <td>YES</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">轮询连接大小</th><br>        <td>N/A</td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">读 HTTP Request</th><br>        <td>阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">读 HTTP Body</th><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">写 HTTP Response</th><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">等待下一个请求</th><br>        <td>阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">SSL 支持</th><br>        <td>Java SSL</td><br>        <td>Java SSL</td><br>        <td>Java SSL</td><br>        <td>OpenSSL</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">SSL 握手</th><br>        <td>阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">最大连接</th><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>      </tr><br>    </tbody><br></table>
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/tomcat8/" rel="tag">#tomcat8</a>
+          
+        </div>
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/25/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -446,6 +379,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -465,8 +402,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -509,6 +455,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hr11"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hr12"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hr21"><span class="nav-number">2.1.</span> <span class="nav-text">公用属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr22"><span class="nav-number">2.2.</span> <span class="nav-text">标准属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr23"><span class="nav-number">2.3.</span> <span class="nav-text">Java TCP socket属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr24"><span class="nav-number">2.4.</span> <span class="nav-text">BIO连接器特殊属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr24"><span class="nav-number">2.5.</span> <span class="nav-text">NIO连接器特殊属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr25"><span class="nav-number">2.6.</span> <span class="nav-text">NIO2 连接器特殊属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr26"><span class="nav-number">2.7.</span> <span class="nav-text">APR/native连接器特殊属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr27"><span class="nav-number">2.8.</span> <span class="nav-text">特点,特征</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hr31"><span class="nav-number">2.8.1.</span> <span class="nav-text">HTTP/1.1和HTTP/1.0支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hr32"><span class="nav-number">2.8.2.</span> <span class="nav-text">Proxy 支持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hr33"><span class="nav-number">2.8.3.</span> <span class="nav-text">SSL 支持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hr41"><span class="nav-number">2.8.3.1.</span> <span class="nav-text">SSL 支持 - BIO, NIO and NIO2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hr42"><span class="nav-number">2.8.3.2.</span> <span class="nav-text">SSL 支持 - APR/Native</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hr28"><span class="nav-number">2.9.</span> <span class="nav-text">连接器比较</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -605,6 +562,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
