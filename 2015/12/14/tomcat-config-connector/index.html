@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -89,7 +89,8 @@
 每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。
 属性
 
-公用属性所有类型connector都支持的">
+公用属性
+所有类型connector都支持">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tomcat8 server.xml 标签connector 配置说明">
 <meta property="og:url" content="http://zjliu.me/2015/12/14/tomcat-config-connector/index.html">
@@ -99,7 +100,8 @@
 每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。
 属性
 
-公用属性所有类型connector都支持的">
+公用属性
+所有类型connector都支持">
 <meta property="og:updated_time" content="2016-07-12T08:20:34.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tomcat8 server.xml 标签connector 配置说明">
@@ -108,20 +110,21 @@
 每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。
 属性
 
-公用属性所有类型connector都支持的">
+公用属性
+所有类型connector都支持">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Mist',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -134,7 +137,7 @@
   <title> tomcat8 server.xml 标签connector 配置说明 | zjliu博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -189,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            首页
           </a>
         </li>
       
@@ -199,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            归档
           </a>
         </li>
       
@@ -209,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
-            Tags
+            标签
           </a>
         </li>
       
@@ -262,7 +265,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2015-12-14T13:50:02+08:00" content="2015-12-14">
               2015-12-14
             </time>
@@ -296,29 +299,1349 @@
 <p>每个connector标签表示一个链接组建，它支持http/1.1协议，能让tomcat作为一个独立的web服务器，有执行servlet和JSP页面的能力，在当前服务器监听特定的TCP端口。可以一个或多个connector标签，每个connector作为tomcat服务的一部分，每个connector使用相关引擎来执行请求处理和创建响应。<br></p>
 <h1 id="hr12">属性</h1>
 
-<p></p><h2 id="hr21">公用属性</h2><br>所有类型connector都支持的属性<p></p>
-<table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>allowTrace</td><br>      <td><br>          用来启用HTTP跟踪，默认为false<br>      </td><br>    </tr><br>    <tr><br>      <td>asyncTimeout</td><br>      <td><br>          设置异步请求超时时间，单位毫秒。默认为30000.<br>      </td><br>    </tr><br>    <tr><br>      <td>enableLookups</td><br>      <td><br>          设置为true时request.getRemoteHost()返回实际的主机名，设置为false时request.getRemoteHost()返回IP地址。默认为false。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxHeaderCount</td><br>      <td><br>          限制请求Header的长度，如果超过请求将被拒绝。0表示没有限制，默认值为100。<font style="color:red"><em></em></font><br>      </td><br>    </tr><br>    <tr><br>      <td>maxParameterCount</td><br>      <td><br>         设置参数的最大长度，参数由容器自动解析，超出长度的参数将被忽略，0表示没有限制，默认值为10000。<font style="color:red"></font><br><br>         请注意， FailedRequestFilter 过滤器可以用来拒绝达到了极限值的请求。<font style="color:red"><em></em></font><br><br>      </td><br>    </tr><br>    <tr><br>      <td>maxPostSize</td><br>      <td><br>        设置由容器解析的URL参数的最大长度，-1(小于0)为禁用这个属性，默认为2097152(2M)<br>        请注意， FailedRequestFilter 过滤器可以用来拒绝达到了极限值的请求。<font style="color:red"></font><br><br>      </td><br>    </tr><br>    <tr><br>      <td>maxSavePostSize</td><br>      <td><br>        最大大小字节的帖子将被保存/缓冲由容器在形式或CLIENT-CERT身份验证。<br>        对于这两种类型的身份验证,之前的帖子将被保存/缓冲用户身份验证。<br>        CLIENT-CERT身份验证,文章对SSL握手的时间缓冲,缓冲清空处理请求。<br>        对表单身份验证后保存在用户定向到登录表单和保留,直到用户成功进行身份验证或会话相关的身份验证请求到期。<br>        的极限可以禁用这个属性设置为1。设置属性为0将禁用保存POST数据的验证。如果不指定,这个属性被设置为4096(4 kb)。<font style="color:red">?</font><br>      </td><br>    </tr><br>    <tr><br>      <td>parseBodyMethods</td><br>      <td><br>        一个以逗号分隔的请求的HTTP方法的身体将解析请求参数完全相同的发布。<br>        这是有用的在RESTful应用程序想要支持POST-style PUT请求的语义。<br>        注意后使Tomcat以外的任何设置的行为,违背了servlet规范的意图。<br>        HTTP方法跟踪是专门禁止依照HTTP规范。默认的是post。 <font style="color:red">?</font><br>      </td><br>    </tr><br>    <tr><br>      <td>port</td><br>      <td><br>        设置连接器监听的端口(0-65535)。如果设置成0，将随机生成(通常只用于嵌入式和测试应用程序)。<br>      </td><br>    </tr><br>    <tr><br>      <td>protocol</td><br>      <td><br>        设置连接器 处理类。<br><br>        现在tomcat提供4种连接器:<br><br>        org.apache.coyote.http11.Http11Protocol - 阻塞的的Java连接器<br><br>        org.apache.coyote.http11.Http11NioProtocol - 非阻塞的的Java NIO连接器<br><br>        org.apache.coyote.http11.Http11Nio2Protocol - 非阻塞的的Java NIO2连接器<br><br>        org.apache.coyote.http11.Http11AprProtocol - 本地连接器<br><br>        也可以使用自定义实现的连接器。<br><br><br><br>        <font style="color:red">注意:</font><br>        如果配置的是默认的HTTP/1.1，将自动配置一个 非阻塞的java NIO连接器 或 APR/native(本地连接器)。<br>        如果环境变量(window path 和 LD_LIBRARY_PATH unix\linux)含有tomcat本地库，将使用APR/native连接器。<br>        如果环境变量不存在将使用 非阻塞的java NIO连接器。<br>        APR/native连接器 和 非阻塞的java NIO连接器 配置参数是不一样的。<br><br><br>        <font style="color:red">建议:</font><br>        在生产环境中配置一个固定的连接器，不使用自动配置。<br><br><br><br>        看看我们的连接器比较<a href="#hr28">图表</a>。<br>        Java连接器的配置是相同的,http和https。有关APR 连接器的更多信息和APR 具体的SSL设置APR <a href="http://tomcat.apache.org/tomcat-8.0-doc/apr.html" target="_blank" rel="external">请访问文档</a><br>      </td><br>    </tr><br>    <tr><br>      <td>proxyName</td><br>      <td><br>        配置这个属性来指定调用request.getServerName()时返回的服务器名称。<br><br>        有关<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/http.html#Proxy_Support" target="_blank" rel="external">更多信息</a>,请参见代理支持。<br><br>      </td><br>    </tr><br>    <tr><br>      <td>proxyPort</td><br>      <td><br>         配置这个属性来指定调用request.getServerPort()时返回的服务器端口。<br><br>        有关<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/http.html#Proxy_Support" target="_blank" rel="external">更多信息</a>,请参见代理支持。<br><br>      </td><br>    </tr><br>    <tr><br>      <td>redirectPort</td><br>      <td><br>       配置指定端口来 ssl连接，一般默认配置是8443，但是浏览器默认的是443端口请求ssl服务器，所以在https 下将8443改为443.<br>      </td><br>    </tr><br>    <tr><br>      <td>scheme</td><br>      <td><br>        配置这个属性来指定调用request.getScheme()时返回的协议名称。<br><br>        默认是http。如果使用SSL连接器，将本属性设置成https。<br><br>      </td><br>    </tr><br>    <tr><br>      <td>secure</td><br>      <td><br>      如果你在SSL连接器或非SSL连接器 接收一个用SSL过来的请求，将这个属性设置成true，调用request.isSecure()时返回true。<br><br>      默认为false。<br><br>      </td><br>    </tr><br>    <tr><br>      <td>URIEncoding</td><br>      <td><br>      配置URI使用的字符编码，来解码?之前的字符串。<br>      一般情况下默认使用utf-8，在org.apache.catalina.STRICT_SERVLET_COMPLIANCE(<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html" target="_blank" rel="external">系统属性</a>)为true的情况下使用 ISO-8859-1。<br>      </td><br>    </tr><br>    <tr><br>      <td>useBodyEncodingForURI</td><br>      <td><br>        当设置为true时 根据http body设置的字符集来解码 url里? 之后的参数。<br><br>        Tomcat 4.1.x 以上的版本支持， setCharacterEncoding方法也用于参数的URL，默认值是false。<br><br>        注意:<br>        这指定如果在contentType应该用于指定的编码URI查询参数,而不是使用URIEncoding。<br>        这个设置存在与Tomcat 4.1.x 兼容。内容类型指定的编码,或者显式地设置使用的要求。<br>        setCharacterEncoding方法也用于参数的URL。默认值是false。<br><br>        <font style="color:red">注释:</font><br>        1)此设置仅适用于请求的查询字符串（?之后的字符串），不会影响URIEncoding设置的?之前的字符串解码。<br><br>        2)如果请求字符编码是错误的(不是由SetCharacterEncodingFilter 类似的过滤器或setCharacterEncoding方法 提供字符集),默认编码总是“iso-8859-1”。<br><br>        更详细的解释请看<a href="http://blog.itpub.net/29254281/viewspace-1073278/" target="_blank" rel="external">URIEncoding和useBodyEncodingForURI详解</a><br>      </td><br>    </tr><br>    <tr><br>      <td>useIPVHosts</td><br>      <td><br>        设置true，tomcat会根据指定的request header Host来确定执行的连接器。默认是false。<br><br>        应用场景只能使用域名访问。<br><br>      </td><br>    </tr><br>    <tr><br>      <td>xpoweredBy</td><br>      <td><br>         若设置为true，Tomcat使用规范建议的报头表明支持Servlet的规范版本，默认false。<br>      </td><br>    </tr><br>  </tbody><br></table>  
+<p></p><h2 id="hr21">公用属性</h2>
+所有类型connector都支持的属性<p></p>
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>allowTrace</td>
+      <td>
+          用来启用HTTP跟踪，默认为false
+      </td>
+    </tr>
+    <tr>
+      <td>asyncTimeout</td>
+      <td>
+          设置异步请求超时时间，单位毫秒。默认为30000.
+      </td>
+    </tr>
+    <tr>
+      <td>enableLookups</td>
+      <td>
+          设置为true时request.getRemoteHost()返回实际的主机名，设置为false时request.getRemoteHost()返回IP地址。默认为false。
+      </td>
+    </tr>
+    <tr>
+      <td>maxHeaderCount</td>
+      <td>
+          限制请求Header的长度，如果超过请求将被拒绝。0表示没有限制，默认值为100。<font style="color:red"><em></em></font>
+      </td>
+    </tr>
+    <tr>
+      <td>maxParameterCount</td>
+      <td>
+         设置参数的最大长度，参数由容器自动解析，超出长度的参数将被忽略，0表示没有限制，默认值为10000。<font style="color:red"></font><br>
+         请注意， FailedRequestFilter 过滤器可以用来拒绝达到了极限值的请求。<font style="color:red"><em></em></font><br>
+      </td>
+    </tr>
+    <tr>
+      <td>maxPostSize</td>
+      <td>
+        设置由容器解析的URL参数的最大长度，-1(小于0)为禁用这个属性，默认为2097152(2M)
+        请注意， FailedRequestFilter 过滤器可以用来拒绝达到了极限值的请求。<font style="color:red"></font><br>
+      </td>
+    </tr>
+    <tr>
+      <td>maxSavePostSize</td>
+      <td>
+        最大大小字节的帖子将被保存/缓冲由容器在形式或CLIENT-CERT身份验证。
+        对于这两种类型的身份验证,之前的帖子将被保存/缓冲用户身份验证。
+        CLIENT-CERT身份验证,文章对SSL握手的时间缓冲,缓冲清空处理请求。
+        对表单身份验证后保存在用户定向到登录表单和保留,直到用户成功进行身份验证或会话相关的身份验证请求到期。
+        的极限可以禁用这个属性设置为1。设置属性为0将禁用保存POST数据的验证。如果不指定,这个属性被设置为4096(4 kb)。<font style="color:red">?</font>
+      </td>
+    </tr>
+    <tr>
+      <td>parseBodyMethods</td>
+      <td>
+        一个以逗号分隔的请求的HTTP方法的身体将解析请求参数完全相同的发布。
+        这是有用的在RESTful应用程序想要支持POST-style PUT请求的语义。
+        注意后使Tomcat以外的任何设置的行为,违背了servlet规范的意图。
+        HTTP方法跟踪是专门禁止依照HTTP规范。默认的是post。 <font style="color:red">?</font>
+      </td>
+    </tr>
+    <tr>
+      <td>port</td>
+      <td>
+        设置连接器监听的端口(0-65535)。如果设置成0，将随机生成(通常只用于嵌入式和测试应用程序)。
+      </td>
+    </tr>
+    <tr>
+      <td>protocol</td>
+      <td>
+        设置连接器 处理类。<br>
+        现在tomcat提供4种连接器:<br>
+        org.apache.coyote.http11.Http11Protocol - 阻塞的的Java连接器<br>
+        org.apache.coyote.http11.Http11NioProtocol - 非阻塞的的Java NIO连接器<br>
+        org.apache.coyote.http11.Http11Nio2Protocol - 非阻塞的的Java NIO2连接器<br>
+        org.apache.coyote.http11.Http11AprProtocol - 本地连接器<br>
+        也可以使用自定义实现的连接器。<br><br>
+
+        <font style="color:red">注意:</font>
+        如果配置的是默认的HTTP/1.1，将自动配置一个 非阻塞的java NIO连接器 或 APR/native(本地连接器)。
+        如果环境变量(window path 和 LD_LIBRARY_PATH unix\linux)含有tomcat本地库，将使用APR/native连接器。
+        如果环境变量不存在将使用 非阻塞的java NIO连接器。
+        APR/native连接器 和 非阻塞的java NIO连接器 配置参数是不一样的。<br><br>
+        <font style="color:red">建议:</font>
+        在生产环境中配置一个固定的连接器，不使用自动配置。<br><br>
+
+        看看我们的连接器比较<a href="#hr28">图表</a>。
+        Java连接器的配置是相同的,http和https。有关APR 连接器的更多信息和APR 具体的SSL设置APR <a href="http://tomcat.apache.org/tomcat-8.0-doc/apr.html" target="_blank" rel="external">请访问文档</a>
+      </td>
+    </tr>
+    <tr>
+      <td>proxyName</td>
+      <td>
+        配置这个属性来指定调用request.getServerName()时返回的服务器名称。<br>
+        有关<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/http.html#Proxy_Support" target="_blank" rel="external">更多信息</a>,请参见代理支持。<br>
+      </td>
+    </tr>
+    <tr>
+      <td>proxyPort</td>
+      <td>
+         配置这个属性来指定调用request.getServerPort()时返回的服务器端口。<br>
+        有关<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/http.html#Proxy_Support" target="_blank" rel="external">更多信息</a>,请参见代理支持。<br>
+      </td>
+    </tr>
+    <tr>
+      <td>redirectPort</td>
+      <td>
+       配置指定端口来 ssl连接，一般默认配置是8443，但是浏览器默认的是443端口请求ssl服务器，所以在https 下将8443改为443.
+      </td>
+    </tr>
+    <tr>
+      <td>scheme</td>
+      <td>
+        配置这个属性来指定调用request.getScheme()时返回的协议名称。<br>
+        默认是http。如果使用SSL连接器，将本属性设置成https。<br>
+      </td>
+    </tr>
+    <tr>
+      <td>secure</td>
+      <td>
+      如果你在SSL连接器或非SSL连接器 接收一个用SSL过来的请求，将这个属性设置成true，调用request.isSecure()时返回true。<br>
+      默认为false。<br>
+      </td>
+    </tr>
+    <tr>
+      <td>URIEncoding</td>
+      <td>
+      配置URI使用的字符编码，来解码?之前的字符串。
+      一般情况下默认使用utf-8，在org.apache.catalina.STRICT_SERVLET_COMPLIANCE(<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/systemprops.html" target="_blank" rel="external">系统属性</a>)为true的情况下使用 ISO-8859-1。
+      </td>
+    </tr>
+    <tr>
+      <td>useBodyEncodingForURI</td>
+      <td>
+        当设置为true时 根据http body设置的字符集来解码 url里? 之后的参数。<br>
+        Tomcat 4.1.x 以上的版本支持， setCharacterEncoding方法也用于参数的URL，默认值是false。<br>
+        注意:
+        这指定如果在contentType应该用于指定的编码URI查询参数,而不是使用URIEncoding。
+        这个设置存在与Tomcat 4.1.x 兼容。内容类型指定的编码,或者显式地设置使用的要求。
+        setCharacterEncoding方法也用于参数的URL。默认值是false。<br>
+        <font style="color:red">注释:</font>
+        1)此设置仅适用于请求的查询字符串（?之后的字符串），不会影响URIEncoding设置的?之前的字符串解码。<br>
+        2)如果请求字符编码是错误的(不是由SetCharacterEncodingFilter 类似的过滤器或setCharacterEncoding方法 提供字符集),默认编码总是“iso-8859-1”。<br>
+        更详细的解释请看<a href="http://blog.itpub.net/29254281/viewspace-1073278/" target="_blank" rel="external">URIEncoding和useBodyEncodingForURI详解</a>
+      </td>
+    </tr>
+    <tr>
+      <td>useIPVHosts</td>
+      <td>
+        设置true，tomcat会根据指定的request header Host来确定执行的连接器。默认是false。<br>
+        应用场景只能使用域名访问。<br>
+      </td>
+    </tr>
+    <tr>
+      <td>xpoweredBy</td>
+      <td>
+         若设置为true，Tomcat使用规范建议的报头表明支持Servlet的规范版本，默认false。
+      </td>
+    </tr>
+  </tbody>
+</table>  
 
 <p></p><h2 id="hr22">标准属性</h2><p></p>
-<p>标准的HTTP连接器(BIO、NIO NIO2和APR/native)都支持以下属性除了常见的连接器上面列出的属性。</p><br> <table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>acceptCount</td><br>      <td><br>          当tomcat起动的线程数达到最大时，接受排队的请求个数，默认值为100。<br>          更详细的解释请看<a href="http://blog.csdn.net/yy_2011/article/details/7994476" target="_blank" rel="external">acceptCount解释</a><br>      </td><br>    </tr><br>    <tr><br>      <td>acceptorThreadCount</td><br>      <td><br>          用于接受连接的线程数量。增加这个值在多CPU的机器上,尽管你永远不会真正需要超过2。<br>          也有很多非维持连接,您可能希望增加这个值。默认值是1。<br>      </td><br>    </tr><br>    <tr><br>      <td>acceptorThreadPriority</td><br>      <td><br>         处理的优先级线程。接受新连接使用的线程。<br>         默认值是5(java.lang.Thread.NORM_PRIORITY。NORM_PRIORITY常数)。<br>         看java.lang.Thread的JavaDoc。线程类的更多细节在这个优先级是什么意思。<br>      </td><br>    </tr><br>    <tr><br>      <td>address</td><br>      <td><br>        与多个服务器的IP地址,该属性指定的地址将用于监听指定的端口。<br>        默认情况下,将使用这个端口与服务器相关联的所有IP地址。<br>      </td><br>    </tr><br>    <tr><br>      <td>allowedTrailerHeaders</td><br>      <td><br>        默认的Tomcat将忽略所有拖车头当处理分块输入。<br>        头要处理,它必须被添加到这个以逗号分隔的标题名称。<br>      </td><br>    </tr><br>    <tr><br>      <td>bindOnInit</td><br>      <td><br>        控制时使用的插座连接器被绑定。<br>        默认绑定启动连接器时,释放当连接器被摧毁。<br>        如果设置为false,套接字将被绑定在启动连接器时,释放时停止。<br>      </td><br>    </tr><br>    <tr><br>      <td>compressableMimeType</td><br>      <td><br>        一个逗号分隔的列表可以使用HTTP压缩的MIME类型。<br>        默认值是text/html,text/xml,text/plain,text/css,text/javascript,application/javascript<br>      </td><br>    </tr><br>    <tr><br>      <td>compression</td><br>      <td><br>        连接器可以使用HTTP/1.1 GZIP压缩为了节省服务器的带宽。<br>        参数的可接受的值是“关闭”(禁用压缩),“on”(允许压缩,导致文本数据压缩),“力”(力量压缩在所有情况下),或一个数值整数值(相当于“上”,但指定的最小输出压缩之前)的数据量。<br>        如果内容长度是未知的和压缩设置为“on”或更激进,输出也将被压缩。<br>        如果不指定,这个属性被设置为“关闭”。<br><br>        注解:<br>        之间有一个权衡使用压缩使用sendfile(节省带宽)和功能(保存你的CPU周期)。<br>        如果连接器支持sendfile特性,例如NIO连接器、使用sendfile将优先于压缩。<br>        静态文件更大的将48 Kb将未压缩的。<br>        你可以关掉sendfile通过设置useSendfile连接器的属性,如下记录,或改变sendfile使用率阀值配置的DefaultServlet在默认conf/server.xml或在web.xml的web应用程序。<br>      </td><br>    </tr><br>    <tr><br>      <td>compressionMinSize</td><br>      <td><br>        如果压缩设置为“on”,那么这个属性可用于指定输出前的最低数量的数据压缩。如果不指定,该属性默认为“2048”。<br>      </td><br>    </tr><br>    <tr><br>      <td>connectionLinger</td><br>      <td><br>        秒数在这个连接器将持续使用的套接字时关闭。默认值是 -1,禁用socket 延迟时间。<br>      </td><br>    </tr><br>    <tr><br>      <td>connectionTimeout</td><br>      <td><br>        这个连接器将等待的毫秒数,接受一个连接后,请求URI提交。<br>        使用一个值为1表示没有(无限)超时。默认值为60000(即60秒),但请注意,标准的server.xml附带Tomcat这个设置为20000(即20秒)。<br>        除非disableUploadTimeout是设置为false,这超时时也会使用阅读请求主体(如果有的话)。<br>      </td><br>    </tr><br>    <tr><br>      <td>connectionUploadTimeout</td><br>      <td><br>        指定超时时间,以毫秒为单位,使用数据上传是在进步。<br>        这只生效disableUploadTimeout是否设置为false。<br>      </td><br>    </tr><br>    <tr><br>      <td>disableUploadTimeout</td><br>      <td><br>        这个标志允许servlet容器使用一个不同的,通常长在数据上传连接超时。<br>        如果不指定,这个属性被设置为true,表示禁用该时间超时。<br>      </td><br>    </tr><br>    <tr><br>      <td>executor</td><br>      <td><br>        在一个执行人元素的引用名称。<br>        如果设置了这个属性,指定遗嘱执行人存在,连接器将使用执行程序,和所有其他线程属性将被忽略。<br>        注意,如果没有指定一个共享的遗嘱执行人连接器,连接器将使用一个私有的,内部执行人提供线程池。<br>      </td><br>    </tr><br>    <tr><br>      <td>executorTerminationTimeoutMillis</td><br>      <td><br>        私有的时间内部执行人将等待请求处理线程结束之前继续停止连接器的过程。<br>        如果没有设置,默认是0(零)BIO连接器和5000(5秒)NIO,NIO2和APR/native连接器。<br>      </td><br>    </tr><br>    <tr><br>      <td>keepAliveTimeout</td><br>      <td><br>        这个连接器的毫秒数将关闭连接之前等待另一个HTTP请求。<br>        默认值是使用connectionTimeout属性的值被设置。使用一个值为-1表示没有(无限)超时。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxConnections</td><br>      <td><br>        最大连接数,服务器将接受和处理在任何给定的时间。<br>        这个数字已经达到时,服务器将接受,但不是过程,另外一个连接。<br>        这些额外的连接被阻塞,直到正在处理的连接数量低于maxConnections此时服务器将重新开始接受和处理新连接。<br>        注意,一旦达到极限,操作系统可能仍然基于acceptCount接受连接设置。默认值不同的连接器类型。<br>        对于生物默认的值是maxThreads除非使用一个执行人在这种情况下,默认的值将maxThreads执行人。<br>        NIO和NIO2默认是10000。APR/native,默认是8192。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxExtensionSize</td><br>      <td><br>        最大连接数,服务器将接受和处理在任何给定的时间。<br>        这个数字已经达到时,服务器将接受,但不是过程,另外一个连接。<br>        这些额外的连接被阻塞,直到正在处理的连接数量低于maxConnections此时服务器将重新开始接受和处理新连接。<br>        注意,一旦达到极限,操作系统可能仍然基于acceptCount接受连接设置。默认值不同的连接器类型。<br>        对于生物默认的值是maxThreads除非使用一个执行人在这种情况下,默认的值将maxThreads执行人。<br>        NIO和NIO2默认是10000。APR/native,默认是8192。<br><br>        注解：<br>        APR/native在Windows上,配置的值将被减少到最高1024的倍数小于或等于maxConnections。这样做是为了性能的原因。<br>        如果设置为值为-1,maxConnections功能被禁用和连接不计算在内。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxHttpHeaderSize</td><br>      <td><br>       请求和响应HTTP头的最大大小,字节中指定。<br>       如果不指定,这个属性被设置为8192(8 KB)。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxKeepAliveRequests</td><br>      <td><br>       HTTP请求的最大数量可以管线式直到服务器连接关闭。<br>       设置这个属性1将禁用HTTP/1.0 keep-alive,以及HTTP/1.1 keep-alive和pipelining。<br>       设置为1将允许无限数量的管道或 keep-aliveHTTP请求。如果不指定,这个属性被设置为100。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxSwallowSize</td><br>      <td><br>       最大请求体字节数(不包括传输编码开销),将由Tomcat吞下上传失败。<br>       上传失败是当Tomcat知道请求的身体将被忽略但客户仍将其发送。<br>       如果Tomcat不吞下身体的客户不太可能看到响应。<br>       如果没有指定默认将使用2097152(2字节)。<br>       小于0的值表明没有限制应该被强制执行。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxThreads</td><br>      <td><br>       请求处理线程的最大数量是由这个连接器,因此决定了同时发生的请求的最大数量,可以处理。<br>       如果不指定,这个属性被设置为200。<br>       如果一个执行人与这个连接器,该属性将被忽略的连接器使用执行程序将执行任务而不是一个内部线程池。<br>      </td><br>    </tr><br>    <tr><br>      <td>maxTrailerSize</td><br>      <td><br>       拖头的总长度限制的最后一块分块的HTTP请求。<br>       如果该值是-1,没有限制将会实施。如果没有指定,那么将使用缺省值为8192。<br>      </td><br>    </tr><br>    <tr><br>      <td>minSpareThreads</td><br>      <td><br>       最低数量的线程总是运行。如果没有指定,默认为10。<br>      </td><br>    </tr><br>    <tr><br>      <td>noCompressionUserAgents</td><br>      <td><br>       价值是一个正则表达式(使用java.util.regex)匹配用户代理头的HTTP客户端压缩不应使用,因为这些客户,虽然他们做的广告支持的功能,有一个破碎的实现。<br>       默认值是一个空字符串(regexp匹配禁用)。<br>      </td><br>    </tr><br>    <tr><br>      <td>processorCache</td><br>      <td><br>       协议处理器缓存的处理器对象来提高性能。<br>       该设置决定多少这些对象的缓存。-1意味着无限的,默认是200。<br>       如果不使用Servlet 3.0异步处理,默认是使用一样的maxThreads设置。<br>       如果使用Servlet 3.0异步处理,默认是使用大maxThreads和预期的并发请求的最大数量(同步和异步)。<br>      </td><br>    </tr><br>    <tr><br>      <td>restrictedUserAgents</td><br>      <td><br>       价值是一个正则表达式(使用java.util.regex)匹配用户代理头的HTTP客户端HTTP/1.1或HTTP/1.0保持活着不应使用,即使客户广告支持这些特性。<br>       默认值是一个空字符串(regexp匹配禁用)。<br>      </td><br>    </tr><br>    <tr><br>      <td>server</td><br>      <td><br>       覆盖服务器的http响应头。<br>       如果设置,该属性的值覆盖了Tomcat缺省和任何服务器头由一个web应用程序。<br>       如果没有设置,任何值指定的应用程序使用。<br>       如果应用程序没有指定一个值,那么使用Apache-Coyote/1.1。除非你是有用的修改,不了你不需要这个功能。<br>      </td><br>    </tr><br>    <tr><br>      <td>socketBuffer</td><br>      <td><br>       缓冲区的大小(以字节为单位)套接字提供输出缓冲。-1可以禁用指定缓冲区的使用。默认情况下,将使用9000字节的缓冲区。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLEnabled</td><br>      <td><br>       使用这个属性来启用SSL连接器上的通信量。<br>       打开SSL握手/加密/解密连接器将这个值设置为true。默认值是false。<br>       当把这个价值真正的你想要设置方案和安全属性传递正确的request.getScheme()和request.isSecure()值servlet的更多信息,请参见SSL支持。<br>      </td><br>    </tr><br>    <tr><br>      <td>tcpNoDelay</td><br>      <td><br>       如果设置为true,TCP_NO_DELAY选项将被设置在服务器套接字,而在大多数情况下提高性能。这是默认设置为true。<br>      </td><br>    </tr><br>    <tr><br>      <td>threadPriority</td><br>      <td><br>       请求处理线程的优先级在JVM中。默认值是5(java.lang.Thread.NORM_PRIORITY 常数)。看到 java.lang.Thread 的JavaDoc。线程类的更多细节在这个优先级是什么意思。<br>      </td><br>    </tr><br>    <tr><br>      <td>upgradeAsyncWriteBufferSize</td><br>      <td><br>       默认大小的缓冲区分配为异步写道,不能在单个操作完成,中指定的字节。<br>       写数据,不能立即将存储在这个缓冲区,直到它可以编写。<br>       如果更多的数据需要存储空间是可用的缓冲区比缓冲区的大小将会增加的时间写作。<br>       如果没有指定将使用默认值为8192。<br>      </td><br>    </tr><br>  </tbody><br></table><br><h2 id="hr23">Java TCP socket属性</h2><br>    BIO,NIO NIO2实施支持以下Java TCP套接字的属性除了常见的连接器和HTTP上面列出的属性。<br> <table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>socket.rxBufSize</td><br>      <td><br>          (int)套接字接收缓冲区大小的字节(SO_RCVBUF)。如果没有设置JVM默认使用。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.txBufSize</td><br>      <td><br>          (int)套接字发送缓冲区大小的字节(SO_SNDBUF)。如果没有设置JVM默认使用。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.tcpNoDelay</td><br>      <td><br>          (bool)这相当于tcpNoDelay标准属性。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.soKeepAlive</td><br>      <td><br>          (bool)布尔值插座保持活着的设置(SO_KEEPALIVE)。如果没有设置JVM默认使用。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.ooBInline</td><br>      <td><br>          (bool)套接字OOBINLINE设置)布尔值。如果没有设置JVM默认使用。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.soReuseAddress</td><br>      <td><br>          (bool)布尔值(SO_REUSEADDR)套接字地址重用选项。如果没有设置JVM默认使用<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.soLingerOn</td><br>      <td><br>          (bool)布尔值的套接字所以徘徊选项(SO_LINGER)。<br>          标准属性的值&gt; = 0 connectionLinger是相当于设置为true。<br>          标准属性的值&lt; 0 connectionLinger是相当于设置为false。<br>          这个属性和soLingerTime必须设置其他JVM的缺省值都将被用于。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.soLingerTime</td><br>      <td><br>         (int)值以秒为套接字选项(SO_LINGER)逗留。<br>         这相当于connectionLinger标准属性。<br>         这个属性和soLingerOn必须设置其他JVM的缺省值都将被用于。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.soTimeout</td><br>      <td><br>         这相当于connectionTimeout标准属性。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.performanceConnectionTime</td><br>      <td><br>         (int)性能设置的第一个值。看<a href="http://docs.oracle.com/javase/7/docs/api/java/net/Socket.html#setPerformancePreferences(int,%20int,%20int)" target="_blank" rel="external">socket性能设置</a>。<br>         所有三个性能属性必须设置其他JVM默认值将用于所有三个。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.performanceLatency</td><br>      <td><br>          (int)性能设置的第二个值。看<a href="http://docs.oracle.com/javase/7/docs/api/java/net/Socket.html#setPerformancePreferences(int,%20int,%20int)" target="_blank" rel="external">socket性能设置</a>。<br>                  所有三个性能属性必须设置其他JVM默认值将用于所有三个。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.performanceBandwidth</td><br>      <td><br>          (int)性能设置的第三个值。看<a href="http://docs.oracle.com/javase/7/docs/api/java/net/Socket.html#setPerformancePreferences(int,%20int,%20int)" target="_blank" rel="external">socket性能设置</a>。<br>                  所有三个性能属性必须设置其他JVM默认值将用于所有三个。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.unlockTimeout</td><br>      <td><br>          (int)套接字超时的解锁。连接器时停止,它会尝试释放受体线程打开连接器本身。默认值是250,值以毫秒为单位<br>      </td><br>    </tr><br>  </tbody><br> </table><br><br><h2 id="hr24">BIO连接器特殊属性</h2><br>    以下属性是特定于BIO连接器。<br> <table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>disableKeepAlivePercentage</td><br>      <td><br>          处理线程的比例必须在使用之前禁用HTTP连接保持提高可伸缩性。<br>          值小于0将更改为0和值大于100更改为100。<br>          如果没有指定,默认值为75。<br>      </td><br>    </tr><br>  </tbody><br></table><br><br><h2 id="hr24">NIO连接器特殊属性</h2><br>    以下属性是特定于NIO连接器。<br> <table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>pollerThreadCount</td><br>      <td><br>          (int)用于运行的线程数量的轮询事件。默认值是1 处理器但不超过2。 　　<br>          接受一个套接字时,操作系统拥有全局锁。<br>          所以以上2线程的好处迅速减少。<br>          拥有多个线程是系统需要接受连接的非常迅速。<br>          但是通常只是增加acceptCount将解决这个问题。<br>          增加这个值也可能是有益的,当大量发送的文件操作。<br>      </td><br>    </tr><br>    <tr><br>      <td>pollerThreadPriority</td><br>      <td><br>         (int)轮询器线程的优先级。默认值是5(java.lang.Thread.NORM_PRIORITY常数)。看查看java.lang.Thread的JavaDoc。线程类的更多细节在这个优先级是什么意思。<br>      </td><br>    </tr><br>    <tr><br>      <td>selectorTimeout</td><br>      <td><br>         (int)以毫秒为单位的时间超时为轮询器 select()。这个值是很重要的,因为连接清理是在同一个线程中完成的,所以不要将这个值设置为一个非常高的。默认值是1000毫秒。<br>      </td><br>    </tr><br>    <tr><br>      <td>useComet</td><br>      <td><br>         (bool)是否允许comets servlet。默认值是正确的。<br>      </td><br>    </tr><br>    <tr><br>      <td>useSendfile</td><br>      <td><br>         (bool)使用这个属性来启用或禁用sendfile能力。默认值是正确的。注意,使用Tomcat sendfile将禁用任何压缩可能进行响应。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.directBuffer</td><br>      <td><br>         (bool)布尔值,是否使用直接bytebuffer)或java映射bytebuffer)。默认是false。<br>          当您使用的是直接缓冲区,确保你为直接内存分配适当的内存空间。在Sun的JDK,类似 -xx:MaxDirectMemorySize=256m。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.appReadBufSize</td><br>      <td><br>         (int)每个连接,打开在Tomcat中得到与读ByteBuffer有关。<br>         这个属性控制这个缓冲区的大小。<br>         默认情况下这个读取缓冲区大小为8192字节。<br>         对于降低并发性,可以增加缓冲更多的数据。<br>         对于极端的维持连接,这个数字减少或增加堆大小。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.appWriteBufSize</td><br>      <td><br>         (int)每个连接,打开在Tomcat中得到与写ByteBuffer有关。<br>         这个属性控制这个缓冲区的大小。<br>         在默认情况下这写缓冲区大小是8192字节。<br>         低并发可以增加这个缓冲响应数据。<br>         对于极端的维持连接,这个数字减少或增加堆大小。<br>         默认值很低,你应该起来如果你不处理成千上万的并发连接。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.bufferPool</td><br>      <td><br>         (int)NIO连接器使用一个类称为NioChannel保存元素链接到一个套接字。<br>         为了减少垃圾收集,NIO连接器缓存这些通道对象。<br>         这个值指定这个缓存的大小。<br>         默认值为500,表示缓存将容纳500 NioChannel对象。<br>         其他值为无限缓存1和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.bufferPoolSize</td><br>      <td><br>         (int)NioChannel池大小也可以,不使用基于对象的。大小计算如下:<br><br>         NioChannel buffer size = read buffer size + write buffer size<br><br>         SecureNioChannel buffer size = application read buffer size + application write buffer size + network read buffer size + network write buffer size<br><br>         字节的值,默认值是 1024<em>1024</em>100 (100MB)。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.processorCache</td><br>      <td><br>        (int)Tomcat将缓存SocketProcessor对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。默认值是500。其他值 -1无限缓存和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.keyCache</td><br>      <td><br>        (int)Tomcat将缓存KeyAttachment对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。默认值是500。其他值 -1无限缓存和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.eventCache</td><br>      <td><br>        (int)Tomcat将缓存PollerEvent对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。默认值是500。其他值 -1无限缓存和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>selectorPool.maxSelectors</td><br>      <td><br>        (int)池中使用选择器的最大数量,以减少选择争用。使用这个选项在命令行org.apache.tomcat.util.net.NioSelectorShared值设置为false。默认值是200。<br>      </td><br>    </tr><br>    <tr><br>      <td>selectorPool.maxSpareSelectors</td><br>      <td><br>        (int)的最大空闲池中使用选择器,以减少选择争用。<br>        当一个选择器返回到池中,系统可以保持或让它成为GC。<br>        使用这个选项在命令行org.apache.tomcat.util.net.NioSelectorShared值设置为false。默认值是1(无限)。<br>      </td><br>    </tr><br>    <tr><br>      <td>command-line-options</td><br>      <td><br>        下面的命令行选项可供NIO连接器:<br>        -Dorg.apache.tomcat.util.net.NioSelectorShared=true|false-默认是true。<br>        将这个值设置为false如果你希望为每个线程使用选择器。<br>        当你将它设置为false,您可以控制的大小使用selectorPool池的选择器。<br>        maxSelectors属性。<br>      </td><br>    </tr><br>    <tr><br>      <td>oomParachute</td><br>      <td><br>        (int)NIO连接器实现一个OutOfMemoryError策略被称作降落伞。<br>        它拥有一大块数据作为一个字节数组。<br>        一个伯父,这一块的数据发布和错误报告。<br>        这将给VM足够的空间清理。<br>        oomParachute代表降落伞的大小(以字节(字节数组)。<br>        默认值是1024 <em> 1024(1 mb)。<br>        请注意,这只适用于伯父错误关于Java堆空间,而且绝对没有保证你将能够恢复。<br>        如果你有一个伯父以外的Java堆,那么这个降落伞技巧不会帮助。<br>      </em></td><br>    </tr><br>  </tbody><br></table><br><br><h2 id="hr25">NIO2 连接器特殊属性</h2><br>    以下属性是特定于NIO2 连接器。<br> <table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>useCaches</td><br>      <td><br>          (bool)使用这个属性来启用或禁用对象缓存来减少GC对象。默认值是false。<br>      </td><br>    </tr><br>    <tr><br>      <td>useComet</td><br>      <td><br>          (bool)是否允许comets servlet。默认值是true<br>      </td><br>    </tr><br>    <tr><br>      <td>useSendfile</td><br>      <td><br>          (bool)使用这个属性来启用或禁用sendfile能力。默认值是true。注意,使用Tomcat sendfile将禁用任何压缩可能进行响应。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.directBuffer</td><br>      <td><br>          (bool)布尔值,是否使用直接bytebuffer)或java映射bytebuffer)。默认是false。 　　<br><br>          当您使用的是直接缓冲区,确保你为直接内存分配适当的内存空间。在Sun的JDK,类似 -xx:MaxDirectMemorySize=256M。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.directSslBuffer</td><br>      <td><br>          (bool布尔值,是否使用直接bytebuffer)或java映射bytebuffer SSL的缓冲区。<br>          如果true那么java.nio.ByteBuffer.allocateDirect()用来分配缓冲区,如果false那么使用java.nio.ByteBuffer.allocate()。默认值是false。 　　<br><br>          当您使用的是直接缓冲区,确保你为直接内存分配适当的内存空间。对甲骨文的JDK,类似-xx:MaxDirectMemorySize=256。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.appReadBufSize</td><br>      <td><br>          (int)每个连接,打开在Tomcat中得到与读ByteBuffer有关。<br>          这个属性控制这个缓冲区的大小。<br>          默认情况下这个读取缓冲区大小为8192字节。<br>          对于降低并发性,可以增加缓冲更多的数据。<br>          对于极端的维持连接,这个数字减少或增加堆大小。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.appWriteBufSize</td><br>      <td><br>          　(int)每个连接,打开在Tomcat中得到与写ByteBuffer有关。<br>          这个属性控制这个缓冲区的大小。<br>          在默认情况下这写缓冲区大小是8192字节。<br>          低并发可以增加这个缓冲响应数据。<br>          对于极端的维持连接,这个数字减少或增加堆大小。 　　<br>          默认值很低,你应该起来如果你不处理成千上万的并发连接。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.bufferPoolSize</td><br>      <td><br>          (int)NIO2连接器使用一个类称为Nio2Channel保存元素链接到一个套接字。<br>          为了减少垃圾收集,NIO2连接器缓存这些通道对象。<br>          这个值指定这个缓存的大小。<br>          默认值为500,表示缓存将容纳500 Nio2Channel对象。<br>          其他值为无限缓存-1和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.processorCache</td><br>      <td><br>          Tomcat将缓存SocketProcessor对象,以减少垃圾收集。<br>          整数值指定有多少对象保持缓存最多。默认值是500。<br>          其他值为无限缓存-1和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>socket.socketWrapperCache</td><br>      <td><br>         (int)Tomcat将缓存SocketWrapper对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。<br>         默认值是500。其他值为无限缓存1和0没有缓存。<br>      </td><br>    </tr><br>    <tr><br>      <td>oomParachute</td><br>      <td><br>        (int)NIO2连接器实现了一个OutOfMemoryError策略被称作降落伞。<br>        它拥有一大块数据作为一个字节数组。<br>        一个伯父,这一块的数据发布和错误报告。<br>        这将给VM足够的空间清理。oomParachute代表降落伞的大小(以字节(字节数组)。<br>        默认值是1024  1024(1 mb)。请注意,这只适用于伯父错误关于Java堆空间,而且绝对没有保证你将能够恢复。<br>        如果你有一个伯父以外的Java堆,那么这个降落伞技巧不会帮助。<br>      </td><br>    </tr><br>  </tbody><br></table><br><br><h2 id="hr26">APR/native连接器特殊属性</h2><br>    以下属性是特定于APR/native连接器。<br><table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>deferAccept</td><br>      <td><br>         设置TCP_DEFER_ACCEPTflag 的监听套接字的连接器。默认值为true TCP_DEFER_ACCEPT支持的操作系统,否则它是false。<br>      </td><br>    </tr><br>    <tr><br>      <td>pollerSize</td><br>      <td><br>         的套接字轮询器负责投票保留连接可以在给定的时间。额外的连接将被关闭。默认值是8192,对应于8192点keep-alive连接。这是一个maxConnections的同义词。<br>      </td><br>    </tr><br>    <tr><br>      <td>pollerThreadCount</td><br>      <td><br>         用于调查保留连接的线程数量。在Windows默认选择的套接字由每个线程小于1024。对于Linux默认是1。改变默认的Windows上可能会有负面的性能影响。<br>      </td><br>    </tr><br>    <tr><br>      <td>pollTime</td><br>      <td><br>         持续的轮询调用时间以微秒为单位。降低这个值会稍微减少延迟的连接被保留在某些情况下,但将使用更多的CPU多的调用。默认值为2000(2)女士。<br>      </td><br>    </tr><br>    <tr><br>      <td>sendfileSize</td><br>      <td><br>         套接字轮询器负责发送异步静态文件能在给定的时间。<br>         额外的连接将被关闭马上没有发送任何数据(导致一个零长度文件在客户端)。<br>         注意,在大多数情况下,sendfile打电话,马上将返回(被照顾的“同步”由内核),和sendfile轮询器将不会被使用,所以静态文件可以同时发送的数量远远大于指定的金额。<br>         默认值是1024。<br>      </td><br>    </tr><br>    <tr><br>      <td>sendfileThreadCount</td><br>      <td><br>         使用服务的线程数量sendfile套接字。<br>         在Windows默认选择的套接字由每个线程小于1024。<br>         对于Linux默认是1。改变默认的Windows上可能会有负面的性能影响。<br>      </td><br>    </tr><br>    <tr><br>      <td>threadPriority</td><br>      <td><br>        (int)接收器和轮询器线程的优先级。默认值是5(java.lang.Thread.NORM_PRIORITY常数)。查看java.lang.Thread的JavaDoc。线程类的更多细节在这个优先级是什么意思。<br>      </td><br>    </tr><br>    <tr><br>      <td>useComet</td><br>      <td><br>        (bool)是否允许comets servlet。默认值是true。<br>      </td><br>    </tr><br>    <tr><br>      <td>useSendfile</td><br>      <td><br>        (bool)使用这个属性来启用或禁用sendfile能力。默认值是true。注意,使用Tomcat sendfile将禁用任何压缩可能进行响应。<br>      </td><br>    </tr><br>  </tbody><br></table><br><br><h2 id="hr27">特点,特征</h2><br><h3 id="hr31">HTTP/1.1和HTTP/1.0支持</h3><br><br><p>这个连接器支持所有必需的HTTP/1.1协议的特性,如RFC 2616所述,包括持久连接、管道、期望和分块编码。<br>    如果客户机(通常是浏览器)只支持HTTP / 1.0,连接器将优雅地跌回支持这个协议。<br>    不需要进行任何配置,使这种支持。连接器还支持HTTP/1.0 keep-alive。</p>
+<p>标准的HTTP连接器(BIO、NIO NIO2和APR/native)都支持以下属性除了常见的连接器上面列出的属性。</p>
+ <table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>acceptCount</td>
+      <td>
+          当tomcat起动的线程数达到最大时，接受排队的请求个数，默认值为100。
+          更详细的解释请看<a href="http://blog.csdn.net/yy_2011/article/details/7994476" target="_blank" rel="external">acceptCount解释</a>
+      </td>
+    </tr>
+    <tr>
+      <td>acceptorThreadCount</td>
+      <td>
+          用于接受连接的线程数量。增加这个值在多CPU的机器上,尽管你永远不会真正需要超过2。
+          也有很多非维持连接,您可能希望增加这个值。默认值是1。
+      </td>
+    </tr>
+    <tr>
+      <td>acceptorThreadPriority</td>
+      <td>
+         处理的优先级线程。接受新连接使用的线程。
+         默认值是5(java.lang.Thread.NORM_PRIORITY。NORM_PRIORITY常数)。
+         看java.lang.Thread的JavaDoc。线程类的更多细节在这个优先级是什么意思。
+      </td>
+    </tr>
+    <tr>
+      <td>address</td> 
+      <td>
+        与多个服务器的IP地址,该属性指定的地址将用于监听指定的端口。
+        默认情况下,将使用这个端口与服务器相关联的所有IP地址。
+      </td>
+    </tr>
+    <tr>
+      <td>allowedTrailerHeaders</td>
+      <td>
+        默认的Tomcat将忽略所有拖车头当处理分块输入。
+        头要处理,它必须被添加到这个以逗号分隔的标题名称。
+      </td>
+    </tr>
+    <tr>
+      <td>bindOnInit</td>
+      <td>
+        控制时使用的插座连接器被绑定。
+        默认绑定启动连接器时,释放当连接器被摧毁。
+        如果设置为false,套接字将被绑定在启动连接器时,释放时停止。
+      </td>
+    </tr>
+    <tr>
+      <td>compressableMimeType</td>
+      <td>
+        一个逗号分隔的列表可以使用HTTP压缩的MIME类型。
+        默认值是text/html,text/xml,text/plain,text/css,text/javascript,application/javascript
+      </td>
+    </tr>
+    <tr>
+      <td>compression</td>
+      <td>
+        连接器可以使用HTTP/1.1 GZIP压缩为了节省服务器的带宽。
+        参数的可接受的值是“关闭”(禁用压缩),“on”(允许压缩,导致文本数据压缩),“力”(力量压缩在所有情况下),或一个数值整数值(相当于“上”,但指定的最小输出压缩之前)的数据量。
+        如果内容长度是未知的和压缩设置为“on”或更激进,输出也将被压缩。
+        如果不指定,这个属性被设置为“关闭”。<br>
+        注解:
+        之间有一个权衡使用压缩使用sendfile(节省带宽)和功能(保存你的CPU周期)。
+        如果连接器支持sendfile特性,例如NIO连接器、使用sendfile将优先于压缩。
+        静态文件更大的将48 Kb将未压缩的。
+        你可以关掉sendfile通过设置useSendfile连接器的属性,如下记录,或改变sendfile使用率阀值配置的DefaultServlet在默认conf/server.xml或在web.xml的web应用程序。
+      </td>
+    </tr>
+    <tr>
+      <td>compressionMinSize</td>
+      <td>
+        如果压缩设置为“on”,那么这个属性可用于指定输出前的最低数量的数据压缩。如果不指定,该属性默认为“2048”。
+      </td>
+    </tr>
+    <tr>
+      <td>connectionLinger</td>
+      <td>
+        秒数在这个连接器将持续使用的套接字时关闭。默认值是 -1,禁用socket 延迟时间。
+      </td>
+    </tr>
+    <tr>
+      <td>connectionTimeout</td>
+      <td>
+        这个连接器将等待的毫秒数,接受一个连接后,请求URI提交。
+        使用一个值为1表示没有(无限)超时。默认值为60000(即60秒),但请注意,标准的server.xml附带Tomcat这个设置为20000(即20秒)。
+        除非disableUploadTimeout是设置为false,这超时时也会使用阅读请求主体(如果有的话)。
+      </td>
+    </tr>
+    <tr>
+      <td>connectionUploadTimeout</td>
+      <td>
+        指定超时时间,以毫秒为单位,使用数据上传是在进步。
+        这只生效disableUploadTimeout是否设置为false。
+      </td>
+    </tr>
+    <tr>
+      <td>disableUploadTimeout</td>
+      <td>
+        这个标志允许servlet容器使用一个不同的,通常长在数据上传连接超时。
+        如果不指定,这个属性被设置为true,表示禁用该时间超时。
+      </td>
+    </tr>
+    <tr>
+      <td>executor</td>
+      <td>
+        在一个执行人元素的引用名称。
+        如果设置了这个属性,指定遗嘱执行人存在,连接器将使用执行程序,和所有其他线程属性将被忽略。
+        注意,如果没有指定一个共享的遗嘱执行人连接器,连接器将使用一个私有的,内部执行人提供线程池。
+      </td>
+    </tr>
+    <tr>
+      <td>executorTerminationTimeoutMillis</td>
+      <td>
+        私有的时间内部执行人将等待请求处理线程结束之前继续停止连接器的过程。
+        如果没有设置,默认是0(零)BIO连接器和5000(5秒)NIO,NIO2和APR/native连接器。
+      </td>
+    </tr>
+    <tr>
+      <td>keepAliveTimeout</td>
+      <td>
+        这个连接器的毫秒数将关闭连接之前等待另一个HTTP请求。
+        默认值是使用connectionTimeout属性的值被设置。使用一个值为-1表示没有(无限)超时。
+      </td>
+    </tr>
+    <tr>
+      <td>maxConnections</td>
+      <td>
+        最大连接数,服务器将接受和处理在任何给定的时间。
+        这个数字已经达到时,服务器将接受,但不是过程,另外一个连接。
+        这些额外的连接被阻塞,直到正在处理的连接数量低于maxConnections此时服务器将重新开始接受和处理新连接。
+        注意,一旦达到极限,操作系统可能仍然基于acceptCount接受连接设置。默认值不同的连接器类型。
+        对于生物默认的值是maxThreads除非使用一个执行人在这种情况下,默认的值将maxThreads执行人。
+        NIO和NIO2默认是10000。APR/native,默认是8192。
+      </td>
+    </tr>
+    <tr>
+      <td>maxExtensionSize</td>
+      <td>
+        最大连接数,服务器将接受和处理在任何给定的时间。
+        这个数字已经达到时,服务器将接受,但不是过程,另外一个连接。
+        这些额外的连接被阻塞,直到正在处理的连接数量低于maxConnections此时服务器将重新开始接受和处理新连接。
+        注意,一旦达到极限,操作系统可能仍然基于acceptCount接受连接设置。默认值不同的连接器类型。
+        对于生物默认的值是maxThreads除非使用一个执行人在这种情况下,默认的值将maxThreads执行人。
+        NIO和NIO2默认是10000。APR/native,默认是8192。<br>
+        注解：
+        APR/native在Windows上,配置的值将被减少到最高1024的倍数小于或等于maxConnections。这样做是为了性能的原因。
+        如果设置为值为-1,maxConnections功能被禁用和连接不计算在内。
+      </td>
+    </tr>
+    <tr>
+      <td>maxHttpHeaderSize</td>
+      <td>
+       请求和响应HTTP头的最大大小,字节中指定。
+       如果不指定,这个属性被设置为8192(8 KB)。
+      </td>
+    </tr>
+    <tr>
+      <td>maxKeepAliveRequests</td>
+      <td>
+       HTTP请求的最大数量可以管线式直到服务器连接关闭。
+       设置这个属性1将禁用HTTP/1.0 keep-alive,以及HTTP/1.1 keep-alive和pipelining。
+       设置为1将允许无限数量的管道或 keep-aliveHTTP请求。如果不指定,这个属性被设置为100。
+      </td>
+    </tr>
+    <tr>
+      <td>maxSwallowSize</td>
+      <td>
+       最大请求体字节数(不包括传输编码开销),将由Tomcat吞下上传失败。
+       上传失败是当Tomcat知道请求的身体将被忽略但客户仍将其发送。
+       如果Tomcat不吞下身体的客户不太可能看到响应。
+       如果没有指定默认将使用2097152(2字节)。
+       小于0的值表明没有限制应该被强制执行。
+      </td>
+    </tr>
+    <tr>
+      <td>maxThreads</td>
+      <td>
+       请求处理线程的最大数量是由这个连接器,因此决定了同时发生的请求的最大数量,可以处理。
+       如果不指定,这个属性被设置为200。
+       如果一个执行人与这个连接器,该属性将被忽略的连接器使用执行程序将执行任务而不是一个内部线程池。
+      </td>
+    </tr>
+    <tr>
+      <td>maxTrailerSize</td>
+      <td>
+       拖头的总长度限制的最后一块分块的HTTP请求。
+       如果该值是-1,没有限制将会实施。如果没有指定,那么将使用缺省值为8192。
+      </td>
+    </tr>
+    <tr>
+      <td>minSpareThreads</td>
+      <td>
+       最低数量的线程总是运行。如果没有指定,默认为10。
+      </td>
+    </tr>
+    <tr>
+      <td>noCompressionUserAgents</td>
+      <td>
+       价值是一个正则表达式(使用java.util.regex)匹配用户代理头的HTTP客户端压缩不应使用,因为这些客户,虽然他们做的广告支持的功能,有一个破碎的实现。
+       默认值是一个空字符串(regexp匹配禁用)。
+      </td>
+    </tr>
+    <tr>
+      <td>processorCache</td>
+      <td>
+       协议处理器缓存的处理器对象来提高性能。
+       该设置决定多少这些对象的缓存。-1意味着无限的,默认是200。
+       如果不使用Servlet 3.0异步处理,默认是使用一样的maxThreads设置。
+       如果使用Servlet 3.0异步处理,默认是使用大maxThreads和预期的并发请求的最大数量(同步和异步)。
+      </td>
+    </tr>
+    <tr>
+      <td>restrictedUserAgents</td>
+      <td>
+       价值是一个正则表达式(使用java.util.regex)匹配用户代理头的HTTP客户端HTTP/1.1或HTTP/1.0保持活着不应使用,即使客户广告支持这些特性。
+       默认值是一个空字符串(regexp匹配禁用)。
+      </td>
+    </tr>
+    <tr>
+      <td>server</td>
+      <td>
+       覆盖服务器的http响应头。
+       如果设置,该属性的值覆盖了Tomcat缺省和任何服务器头由一个web应用程序。
+       如果没有设置,任何值指定的应用程序使用。
+       如果应用程序没有指定一个值,那么使用Apache-Coyote/1.1。除非你是有用的修改,不了你不需要这个功能。
+      </td>
+    </tr>
+    <tr>
+      <td>socketBuffer</td>
+      <td>
+       缓冲区的大小(以字节为单位)套接字提供输出缓冲。-1可以禁用指定缓冲区的使用。默认情况下,将使用9000字节的缓冲区。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLEnabled</td>
+      <td>
+       使用这个属性来启用SSL连接器上的通信量。
+       打开SSL握手/加密/解密连接器将这个值设置为true。默认值是false。
+       当把这个价值真正的你想要设置方案和安全属性传递正确的request.getScheme()和request.isSecure()值servlet的更多信息,请参见SSL支持。
+      </td>
+    </tr>
+    <tr>
+      <td>tcpNoDelay</td>
+      <td>
+       如果设置为true,TCP_NO_DELAY选项将被设置在服务器套接字,而在大多数情况下提高性能。这是默认设置为true。
+      </td>
+    </tr>
+    <tr>
+      <td>threadPriority</td>
+      <td>
+       请求处理线程的优先级在JVM中。默认值是5(java.lang.Thread.NORM_PRIORITY 常数)。看到 java.lang.Thread 的JavaDoc。线程类的更多细节在这个优先级是什么意思。
+      </td>
+    </tr>
+    <tr>
+      <td>upgradeAsyncWriteBufferSize</td>
+      <td>
+       默认大小的缓冲区分配为异步写道,不能在单个操作完成,中指定的字节。
+       写数据,不能立即将存储在这个缓冲区,直到它可以编写。
+       如果更多的数据需要存储空间是可用的缓冲区比缓冲区的大小将会增加的时间写作。
+       如果没有指定将使用默认值为8192。
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h2 id="hr23">Java TCP socket属性</h2>
+    BIO,NIO NIO2实施支持以下Java TCP套接字的属性除了常见的连接器和HTTP上面列出的属性。
+ <table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>socket.rxBufSize</td>
+      <td>
+          (int)套接字接收缓冲区大小的字节(SO_RCVBUF)。如果没有设置JVM默认使用。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.txBufSize</td>
+      <td>
+          (int)套接字发送缓冲区大小的字节(SO_SNDBUF)。如果没有设置JVM默认使用。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.tcpNoDelay</td>
+      <td>
+          (bool)这相当于tcpNoDelay标准属性。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.soKeepAlive</td>
+      <td>
+          (bool)布尔值插座保持活着的设置(SO_KEEPALIVE)。如果没有设置JVM默认使用。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.ooBInline</td>
+      <td>
+          (bool)套接字OOBINLINE设置)布尔值。如果没有设置JVM默认使用。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.soReuseAddress</td>
+      <td>
+          (bool)布尔值(SO_REUSEADDR)套接字地址重用选项。如果没有设置JVM默认使用
+      </td>
+    </tr>
+    <tr>
+      <td>socket.soLingerOn</td>
+      <td>
+          (bool)布尔值的套接字所以徘徊选项(SO_LINGER)。
+          标准属性的值&gt; = 0 connectionLinger是相当于设置为true。
+          标准属性的值&lt; 0 connectionLinger是相当于设置为false。
+          这个属性和soLingerTime必须设置其他JVM的缺省值都将被用于。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.soLingerTime</td>
+      <td>
+         (int)值以秒为套接字选项(SO_LINGER)逗留。
+         这相当于connectionLinger标准属性。
+         这个属性和soLingerOn必须设置其他JVM的缺省值都将被用于。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.soTimeout</td>
+      <td>
+         这相当于connectionTimeout标准属性。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.performanceConnectionTime</td>
+      <td>
+         (int)性能设置的第一个值。看<a href="http://docs.oracle.com/javase/7/docs/api/java/net/Socket.html#setPerformancePreferences(int,%20int,%20int)" target="_blank" rel="external">socket性能设置</a>。
+         所有三个性能属性必须设置其他JVM默认值将用于所有三个。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.performanceLatency</td>
+      <td>
+          (int)性能设置的第二个值。看<a href="http://docs.oracle.com/javase/7/docs/api/java/net/Socket.html#setPerformancePreferences(int,%20int,%20int)" target="_blank" rel="external">socket性能设置</a>。
+                  所有三个性能属性必须设置其他JVM默认值将用于所有三个。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.performanceBandwidth</td>
+      <td>
+          (int)性能设置的第三个值。看<a href="http://docs.oracle.com/javase/7/docs/api/java/net/Socket.html#setPerformancePreferences(int,%20int,%20int)" target="_blank" rel="external">socket性能设置</a>。
+                  所有三个性能属性必须设置其他JVM默认值将用于所有三个。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.unlockTimeout</td>
+      <td>
+          (int)套接字超时的解锁。连接器时停止,它会尝试释放受体线程打开连接器本身。默认值是250,值以毫秒为单位
+      </td>
+    </tr>
+  </tbody>
+ </table>
+
+<h2 id="hr24">BIO连接器特殊属性</h2>
+    以下属性是特定于BIO连接器。
+ <table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>disableKeepAlivePercentage</td>
+      <td>
+          处理线程的比例必须在使用之前禁用HTTP连接保持提高可伸缩性。
+          值小于0将更改为0和值大于100更改为100。
+          如果没有指定,默认值为75。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="hr24">NIO连接器特殊属性</h2>
+    以下属性是特定于NIO连接器。
+ <table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>pollerThreadCount</td>
+      <td>
+          (int)用于运行的线程数量的轮询事件。默认值是1 处理器但不超过2。 　　
+          接受一个套接字时,操作系统拥有全局锁。
+          所以以上2线程的好处迅速减少。
+          拥有多个线程是系统需要接受连接的非常迅速。
+          但是通常只是增加acceptCount将解决这个问题。
+          增加这个值也可能是有益的,当大量发送的文件操作。
+      </td>
+    </tr>
+    <tr>
+      <td>pollerThreadPriority</td>
+      <td>
+         (int)轮询器线程的优先级。默认值是5(java.lang.Thread.NORM_PRIORITY常数)。看查看java.lang.Thread的JavaDoc。线程类的更多细节在这个优先级是什么意思。
+      </td>
+    </tr>
+    <tr>
+      <td>selectorTimeout</td>
+      <td>
+         (int)以毫秒为单位的时间超时为轮询器 select()。这个值是很重要的,因为连接清理是在同一个线程中完成的,所以不要将这个值设置为一个非常高的。默认值是1000毫秒。
+      </td>
+    </tr>
+    <tr>
+      <td>useComet</td>
+      <td>
+         (bool)是否允许comets servlet。默认值是正确的。
+      </td>
+    </tr>
+    <tr>
+      <td>useSendfile</td>
+      <td>
+         (bool)使用这个属性来启用或禁用sendfile能力。默认值是正确的。注意,使用Tomcat sendfile将禁用任何压缩可能进行响应。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.directBuffer</td>
+      <td>
+         (bool)布尔值,是否使用直接bytebuffer)或java映射bytebuffer)。默认是false。
+          当您使用的是直接缓冲区,确保你为直接内存分配适当的内存空间。在Sun的JDK,类似 -xx:MaxDirectMemorySize=256m。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.appReadBufSize</td>
+      <td>
+         (int)每个连接,打开在Tomcat中得到与读ByteBuffer有关。
+         这个属性控制这个缓冲区的大小。
+         默认情况下这个读取缓冲区大小为8192字节。
+         对于降低并发性,可以增加缓冲更多的数据。
+         对于极端的维持连接,这个数字减少或增加堆大小。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.appWriteBufSize</td>
+      <td>
+         (int)每个连接,打开在Tomcat中得到与写ByteBuffer有关。
+         这个属性控制这个缓冲区的大小。
+         在默认情况下这写缓冲区大小是8192字节。
+         低并发可以增加这个缓冲响应数据。
+         对于极端的维持连接,这个数字减少或增加堆大小。
+         默认值很低,你应该起来如果你不处理成千上万的并发连接。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.bufferPool</td>
+      <td>
+         (int)NIO连接器使用一个类称为NioChannel保存元素链接到一个套接字。
+         为了减少垃圾收集,NIO连接器缓存这些通道对象。
+         这个值指定这个缓存的大小。
+         默认值为500,表示缓存将容纳500 NioChannel对象。
+         其他值为无限缓存1和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.bufferPoolSize</td>
+      <td>
+         (int)NioChannel池大小也可以,不使用基于对象的。大小计算如下:<br>
+         NioChannel buffer size = read buffer size + write buffer size<br>
+         SecureNioChannel buffer size = application read buffer size + application write buffer size + network read buffer size + network write buffer size<br>
+         字节的值,默认值是 1024<em>1024</em>100 (100MB)。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.processorCache</td>
+      <td>
+        (int)Tomcat将缓存SocketProcessor对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。默认值是500。其他值 -1无限缓存和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.keyCache</td>
+      <td>
+        (int)Tomcat将缓存KeyAttachment对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。默认值是500。其他值 -1无限缓存和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.eventCache</td>
+      <td>
+        (int)Tomcat将缓存PollerEvent对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。默认值是500。其他值 -1无限缓存和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>selectorPool.maxSelectors</td>
+      <td>
+        (int)池中使用选择器的最大数量,以减少选择争用。使用这个选项在命令行org.apache.tomcat.util.net.NioSelectorShared值设置为false。默认值是200。
+      </td>
+    </tr>
+    <tr>
+      <td>selectorPool.maxSpareSelectors</td>
+      <td>
+        (int)的最大空闲池中使用选择器,以减少选择争用。
+        当一个选择器返回到池中,系统可以保持或让它成为GC。
+        使用这个选项在命令行org.apache.tomcat.util.net.NioSelectorShared值设置为false。默认值是1(无限)。
+      </td>
+    </tr>
+    <tr>
+      <td>command-line-options</td>
+      <td>
+        下面的命令行选项可供NIO连接器: 
+        -Dorg.apache.tomcat.util.net.NioSelectorShared=true|false-默认是true。
+        将这个值设置为false如果你希望为每个线程使用选择器。
+        当你将它设置为false,您可以控制的大小使用selectorPool池的选择器。
+        maxSelectors属性。
+      </td>
+    </tr>
+    <tr>
+      <td>oomParachute</td>
+      <td>
+        (int)NIO连接器实现一个OutOfMemoryError策略被称作降落伞。
+        它拥有一大块数据作为一个字节数组。
+        一个伯父,这一块的数据发布和错误报告。
+        这将给VM足够的空间清理。
+        oomParachute代表降落伞的大小(以字节(字节数组)。
+        默认值是1024 <em> 1024(1 mb)。
+        请注意,这只适用于伯父错误关于Java堆空间,而且绝对没有保证你将能够恢复。
+        如果你有一个伯父以外的Java堆,那么这个降落伞技巧不会帮助。
+      </em></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="hr25">NIO2 连接器特殊属性</h2>
+    以下属性是特定于NIO2 连接器。
+ <table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>useCaches</td>
+      <td>
+          (bool)使用这个属性来启用或禁用对象缓存来减少GC对象。默认值是false。
+      </td>
+    </tr>
+    <tr>
+      <td>useComet</td>
+      <td>
+          (bool)是否允许comets servlet。默认值是true
+      </td>
+    </tr>
+    <tr>
+      <td>useSendfile</td>
+      <td>
+          (bool)使用这个属性来启用或禁用sendfile能力。默认值是true。注意,使用Tomcat sendfile将禁用任何压缩可能进行响应。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.directBuffer</td>
+      <td>
+          (bool)布尔值,是否使用直接bytebuffer)或java映射bytebuffer)。默认是false。 　　<br>
+          当您使用的是直接缓冲区,确保你为直接内存分配适当的内存空间。在Sun的JDK,类似 -xx:MaxDirectMemorySize=256M。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.directSslBuffer</td>
+      <td>
+          (bool布尔值,是否使用直接bytebuffer)或java映射bytebuffer SSL的缓冲区。
+          如果true那么java.nio.ByteBuffer.allocateDirect()用来分配缓冲区,如果false那么使用java.nio.ByteBuffer.allocate()。默认值是false。 　　<br>
+          当您使用的是直接缓冲区,确保你为直接内存分配适当的内存空间。对甲骨文的JDK,类似-xx:MaxDirectMemorySize=256。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.appReadBufSize</td>
+      <td>
+          (int)每个连接,打开在Tomcat中得到与读ByteBuffer有关。
+          这个属性控制这个缓冲区的大小。
+          默认情况下这个读取缓冲区大小为8192字节。
+          对于降低并发性,可以增加缓冲更多的数据。
+          对于极端的维持连接,这个数字减少或增加堆大小。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.appWriteBufSize</td>
+      <td>
+          　(int)每个连接,打开在Tomcat中得到与写ByteBuffer有关。
+          这个属性控制这个缓冲区的大小。
+          在默认情况下这写缓冲区大小是8192字节。
+          低并发可以增加这个缓冲响应数据。
+          对于极端的维持连接,这个数字减少或增加堆大小。 　　
+          默认值很低,你应该起来如果你不处理成千上万的并发连接。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.bufferPoolSize</td>
+      <td>
+          (int)NIO2连接器使用一个类称为Nio2Channel保存元素链接到一个套接字。
+          为了减少垃圾收集,NIO2连接器缓存这些通道对象。
+          这个值指定这个缓存的大小。
+          默认值为500,表示缓存将容纳500 Nio2Channel对象。
+          其他值为无限缓存-1和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.processorCache</td>
+      <td>
+          Tomcat将缓存SocketProcessor对象,以减少垃圾收集。
+          整数值指定有多少对象保持缓存最多。默认值是500。
+          其他值为无限缓存-1和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>socket.socketWrapperCache</td>
+      <td>
+         (int)Tomcat将缓存SocketWrapper对象,以减少垃圾收集。整数值指定有多少对象保持缓存最多。
+         默认值是500。其他值为无限缓存1和0没有缓存。
+      </td>
+    </tr>
+    <tr>
+      <td>oomParachute</td>
+      <td>
+        (int)NIO2连接器实现了一个OutOfMemoryError策略被称作降落伞。
+        它拥有一大块数据作为一个字节数组。
+        一个伯父,这一块的数据发布和错误报告。
+        这将给VM足够的空间清理。oomParachute代表降落伞的大小(以字节(字节数组)。
+        默认值是1024  1024(1 mb)。请注意,这只适用于伯父错误关于Java堆空间,而且绝对没有保证你将能够恢复。
+        如果你有一个伯父以外的Java堆,那么这个降落伞技巧不会帮助。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="hr26">APR/native连接器特殊属性</h2>
+    以下属性是特定于APR/native连接器。
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>deferAccept</td>
+      <td>
+         设置TCP_DEFER_ACCEPTflag 的监听套接字的连接器。默认值为true TCP_DEFER_ACCEPT支持的操作系统,否则它是false。
+      </td>
+    </tr>
+    <tr>
+      <td>pollerSize</td>
+      <td>
+         的套接字轮询器负责投票保留连接可以在给定的时间。额外的连接将被关闭。默认值是8192,对应于8192点keep-alive连接。这是一个maxConnections的同义词。
+      </td>
+    </tr>
+    <tr>
+      <td>pollerThreadCount</td>
+      <td>
+         用于调查保留连接的线程数量。在Windows默认选择的套接字由每个线程小于1024。对于Linux默认是1。改变默认的Windows上可能会有负面的性能影响。
+      </td>
+    </tr>
+    <tr>
+      <td>pollTime</td>
+      <td>
+         持续的轮询调用时间以微秒为单位。降低这个值会稍微减少延迟的连接被保留在某些情况下,但将使用更多的CPU多的调用。默认值为2000(2)女士。
+      </td>
+    </tr>
+    <tr>
+      <td>sendfileSize</td>
+      <td>
+         套接字轮询器负责发送异步静态文件能在给定的时间。
+         额外的连接将被关闭马上没有发送任何数据(导致一个零长度文件在客户端)。
+         注意,在大多数情况下,sendfile打电话,马上将返回(被照顾的“同步”由内核),和sendfile轮询器将不会被使用,所以静态文件可以同时发送的数量远远大于指定的金额。
+         默认值是1024。
+      </td>
+    </tr>
+    <tr>
+      <td>sendfileThreadCount</td>
+      <td>
+         使用服务的线程数量sendfile套接字。
+         在Windows默认选择的套接字由每个线程小于1024。
+         对于Linux默认是1。改变默认的Windows上可能会有负面的性能影响。
+      </td>
+    </tr>
+    <tr>
+      <td>threadPriority</td>
+      <td>
+        (int)接收器和轮询器线程的优先级。默认值是5(java.lang.Thread.NORM_PRIORITY常数)。查看java.lang.Thread的JavaDoc。线程类的更多细节在这个优先级是什么意思。
+      </td>
+    </tr>
+    <tr>
+      <td>useComet</td>
+      <td>
+        (bool)是否允许comets servlet。默认值是true。
+      </td>
+    </tr>
+    <tr>
+      <td>useSendfile</td>
+      <td>
+        (bool)使用这个属性来启用或禁用sendfile能力。默认值是true。注意,使用Tomcat sendfile将禁用任何压缩可能进行响应。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="hr27">特点,特征</h2>
+<h3 id="hr31">HTTP/1.1和HTTP/1.0支持</h3><br>
+<p>这个连接器支持所有必需的HTTP/1.1协议的特性,如RFC 2616所述,包括持久连接、管道、期望和分块编码。
+    如果客户机(通常是浏览器)只支持HTTP / 1.0,连接器将优雅地跌回支持这个协议。
+    不需要进行任何配置,使这种支持。连接器还支持HTTP/1.0 keep-alive。</p>
 
 <h3 id="hr32">Proxy 支持</h3> 
 
-<p>proxyName和proxyPort属性可以使用Tomcat运行时代理服务器。<br>    这些属性修改request.getServerName回到web应用程序调用 request.getServerName()和request.getServerPort()方法,通常用于构造绝对url重定向。<br>    没有配置这些属性,返回的值将反映的服务器名称和端口的连接代理服务器接收,而不是客户的服务器名称和端口指示原始请求。<br>    有关更多信息,<a href="http://tomcat.apache.org/tomcat-8.0-doc/proxy-howto.html" target="_blank" rel="external">请参见代理支持指南</a>。</p>
+<p>proxyName和proxyPort属性可以使用Tomcat运行时代理服务器。
+    这些属性修改request.getServerName回到web应用程序调用 request.getServerName()和request.getServerPort()方法,通常用于构造绝对url重定向。
+    没有配置这些属性,返回的值将反映的服务器名称和端口的连接代理服务器接收,而不是客户的服务器名称和端口指示原始请求。
+    有关更多信息,<a href="http://tomcat.apache.org/tomcat-8.0-doc/proxy-howto.html" target="_blank" rel="external">请参见代理支持指南</a>。</p>
 
 <h3 id="hr33">SSL 支持</h3>
 
-<p>您可以启用SSL支持一个特定的实例这个连接器通过设置SSLEnabled属性为true。<br>    您还需要设置方案和安全属性的值分别https和真实,将正确的信息传递给servlet。<br>    BIO,NIO NIO2连接器使用JSSE SSL而4月/本地连接器使用OpenSSL。因此,除了使用不同的属性来配置SSL,APR/native连接器还需要提供一个不同的密钥和证书的格式。<br>    有关更多信息,<a href="http://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html" target="_blank" rel="external">请参见SSL配置指南。</a></p>
+<p>您可以启用SSL支持一个特定的实例这个连接器通过设置SSLEnabled属性为true。
+    您还需要设置方案和安全属性的值分别https和真实,将正确的信息传递给servlet。
+    BIO,NIO NIO2连接器使用JSSE SSL而4月/本地连接器使用OpenSSL。因此,除了使用不同的属性来配置SSL,APR/native连接器还需要提供一个不同的密钥和证书的格式。
+    有关更多信息,<a href="http://tomcat.apache.org/tomcat-8.0-doc/ssl-howto.html" target="_blank" rel="external">请参见SSL配置指南。</a></p>
 
-<p></p><h4 id="hr41">SSL 支持 - BIO, NIO and NIO2</h4><br>    BIO, NIO and NIO2配置SSL连接器使用以下属性<p></p>
-<table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>algorithm</td><br>      <td><br>         要使用证书编码算法。<br>         这个默认为KeyManagerFactory.getDefaultAlgorithm()返回SunX509 Sun jvm。IBM jvm IbmX509返回。<br>         对于其他供应商,请查阅JVM默认值的文档。<br>      </td><br>    </tr><br>    <tr><br>      <td>allowUnsafeLegacyRenegotiation</td><br>      <td><br>        遗留TLS协商允许是不安全的,可能会让用户cve - 2009 - 3555,一个中间人使用TLS协议漏洞,允许攻击者注入任意数据用户的请求。<br>        如果没有指定,默认使用的是错误的。<br>        这个属性只有一个效果如果JVM不支持RFC 5746的的存在pseudo-ciphersuite TLS_EMPTY_RENEGOTIATION_INFO_SCSV。<br>        这是可用的JRE / JDK 6更新22起。RFC 5746在哪里支持重新谈判,包括支持安全的遗产重新谈判,由JVM配置控制。<br>      </td><br>    </tr><br>    <tr><br>      <td>ciphers</td><br>      <td><br>         如果指定和使用”,“作为一个分隔符,只列出的密码,将使用SSL支持的实现。<br>         使用JSSE密码的密码指定命名约定。所有的特殊价值将使所有支持的密码。<br>         这将包括许多不安全。都是仅用于测试目的。<br><br><br>         列表中还可以使用“:”作为分隔符,在这种情况下它将使用OpenSSL语法(见OpenSSL文档密码支持的列表和语法)。<br>         这个过滤的行为保持一致的行为OpenSSL 1.0.2中稳定的分支。<br><br><br>         如果没有指定,默认(使用OpenSSL符号) HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5 。<br><br><br>         注意,Java不指定的顺序密码被定义为一个优先顺序排列。看到useServerCipherSuitesOrder。<br>      </td><br>    </tr><br>    <tr><br>      <td>clientAuth</td><br>      <td><br>         设置为true如果你想SSL堆栈需要一个有效的证书链从客户机之前接受连接。<br>         将希望如果你想SSL堆栈请求客户机证书,但不会失败如果你不是。<br>         假值(默认)不需要证书链,除非客户端请求一个资源使用CLIENT-CERT身份验证的安全约束保护的。<br>      </td><br>    </tr><br>    <tr><br>      <td>clientCertProvider</td><br>      <td><br>        当客户端证书信息提出了一种非java.security.cert的实例。<br>        X509Certificate需要转换之前可以和这个属性控制使用JSSE提供程序是用来执行转换。<br>        与 <a href="http://tomcat.apache.org/tomcat-8.0-doc/config/ajp.html" target="_blank" rel="external">AJP连接器</a>,例如使用HTTP连接器和<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/valve.html#SSL_Authenticator_Valve" target="_blank" rel="external">org.apache.catalina.valves.SSLValve</a> APR。如果没有指定,默认提供者将使用。<br>      </td><br>    </tr><br>    <tr><br>      <td>crlFile</td><br>      <td><br>        要使用的证书撤销列表来验证客户端证书。<br>        如果没有定义,客户端证书将不会对证书撤销列表检查。<br>        文件可能被指定使用一个URL,绝对路径或相对路径(CATAINA_BASE)。<br>      </td><br>    </tr><br>    <tr><br>      <td>keyAlias</td><br>      <td><br>        别名用于服务器密钥和证书的密钥存储库。<br>        如果不指定,第一个键将使用从密钥库读取。<br>        键的顺序读取密钥存储库是依赖于实现的。<br>        它可能不是从密钥库中读取的,键添加的顺序相同。<br>        如果存在多个关键在keystore强烈建议keyAlias配置,以确保使用了正确的关键。<br>      </td><br>    </tr><br>    <tr><br>      <td>keyPass</td><br>      <td><br>        密码用于访问指定的密钥存储库文件的服务器证书。默认值是“changeit”。<br>      </td><br>    </tr><br>    <tr><br>      <td>keystoreFile</td><br>      <td><br>        他密钥存储库文件的路径名,你有存储加载的服务器证书。<br>        默认情况下,路径名是文件”。密钥存储库”操作系统用户的主目录运行Tomcat。<br>        如果你keystoreType不需要一个文件使用”“为这个参数(空字符串)。文件可能被指定使用一个URL,绝对路径或相对路径(CATAINA_BASE)。<br>      </td><br>    </tr><br>    <tr><br>      <td>keystorePass</td><br>      <td><br>        用于访问指定的密钥存储库文件的密码。默认值为的keyPass属性的值。<br>      </td><br>    </tr><br>    <tr><br>      <td>keystoreProvider</td><br>      <td><br>        密钥存储库供应商的名称用于服务器证书。<br>        如果不指定,注册供应商列表遍历优先顺序和第一个提供者支持keystoreType使用。<br>      </td><br>    </tr><br>    <tr><br>      <td>keystoreType</td><br>      <td><br>        类型的密钥存储库文件用于服务器证书。如果没有指定,默认值是“JKS”。<br>      </td><br>    </tr><br>    <tr><br>      <td>sessionCacheSize</td><br>      <td><br>        SSL会话的数量保持在会话缓存。使用0指定无限缓存大小。如果没有指定,默认为0。<br>      </td><br>    </tr><br>    <tr><br>      <td>sessionTimeout</td><br>      <td><br>        时间,以秒为单位,建立SSL会话超时。使用0指定无限超时。如果没有指定,默认86400(24小时)。<br>      </td><br>    </tr><br>    <tr><br>      <td>sslEnabledProtocols</td><br>      <td><br>        SSL协议的逗号分隔列表支持HTTPS连接。<br>        如果指定,只列出了协议,将启用SSL支持的实现。<br>        如果没有指定,JVM默认(不含SSLv2的站点时,如果JVM SSLv3默认支持其中的一种或两种)。<br>        允许的值可能会从JVM文档获得允许的值SSLSocket.setEnabledProtocols()例如甲骨文Java 7。注意:这个属性之间存在重叠和sslProtocol。<br>      </td><br>    </tr><br>    <tr><br>      <td>sslImplementationName</td><br>      <td><br>        使用SSL实现的类名。如果没有指定,默认org.apache.tomcat.util.net.jsse.JSSEImplementation将它封装JVM的缺省使用JSSE提供程序。<br>        注意,JVM可以使用不同的JSSE提供程序配置为默认。<br>      </td><br>    </tr><br>    <tr><br>      <td>sslProtocol</td><br>      <td><br>        使用SSL协议(s)(一个值可以使多个协议,有关详细信息,请参阅JVM文档)。如果没有指定,默认是TLS。<br>        允许的值可能会从JVM文档获得允许的值算法在创建一个如SSLContext实例。甲骨文Java 7。注意:这个属性之间存在重叠和sslEnabledProtocols。<br>      </td><br>    </tr><br>    <tr><br>      <td>trustManagerClassName</td><br>      <td><br>        自定义信任管理器类的名称用来验证客户端证书。类必须有一个零参数的构造函数,还必须实现javax.net.ssl.X509TrustManager。<br>        如果设置了这个属性,信任存储属性可能被忽略。<br>      </td><br>    </tr><br>    <tr><br>      <td>trustMaxCertLength</td><br>      <td><br>        中间的最大数量的证书将被允许当验证客户端证书。如果没有指定,那么将使用默认值5。<br>      </td><br>    </tr><br>    <tr><br>      <td>truststoreAlgorithm</td><br>      <td><br>        该算法用于信任库。如果没有指定,默认值返回使用的是javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm()。<br>      </td><br>    </tr><br>    <tr><br>      <td>truststoreFile</td><br>      <td><br>        信任存储库文件使用来验证客户端证书。默认的值是javax.net.ssl.trustStore系统属性。<br>        如果这个属性和默认设置系统属性,没有信任存储配置。文件可能被指定使用一个URL,绝对路径或相对路径(CATAINA_BASE)。<br>      </td><br>    </tr><br>    <tr><br>      <td>truststorePass</td><br>      <td><br>        密码访问信任存储区中。默认的值是javax.net.ssl.trustStorePassword系统属性。如果该属性为空,没有信任存储密码配置。<br>        如果指定一个无效的信任存储密码,警告将被记录,将尝试访问信任存储区中没有密码将跳过验证信任存储的内容。<br>      </td><br>    </tr><br>    <tr><br>      <td>truststoreProvider</td><br>      <td><br>        信任存储库供应商的名称用于服务器证书。默认的值是javax.net.ssl.trustStoreProvider系统属性。如果该属性为空,keystoreProvider用作默认的值。<br>        如果没有这个属性,默认系统属性和keystoreProvideris设置,注册供应商列表遍历优先顺序和第一个支持使用truststoreType提供者。<br>      </td><br>    </tr><br>    <tr><br>      <td>truststoreType</td><br>      <td><br>        密钥存储库的类型用于信任存储区中。默认的值是javax.net.ssl.trustStoreType系统属性。<br>        如果该属性为空,keystoreType用作默认的值。<br>      </td><br>    </tr><br>  </tbody><br></table>
+<p></p><h4 id="hr41">SSL 支持 - BIO, NIO and NIO2</h4>
+    BIO, NIO and NIO2配置SSL连接器使用以下属性<p></p>
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>algorithm</td>
+      <td>
+         要使用证书编码算法。
+         这个默认为KeyManagerFactory.getDefaultAlgorithm()返回SunX509 Sun jvm。IBM jvm IbmX509返回。
+         对于其他供应商,请查阅JVM默认值的文档。
+      </td>
+    </tr>
+    <tr>
+      <td>allowUnsafeLegacyRenegotiation</td>
+      <td>
+        遗留TLS协商允许是不安全的,可能会让用户cve - 2009 - 3555,一个中间人使用TLS协议漏洞,允许攻击者注入任意数据用户的请求。
+        如果没有指定,默认使用的是错误的。
+        这个属性只有一个效果如果JVM不支持RFC 5746的的存在pseudo-ciphersuite TLS_EMPTY_RENEGOTIATION_INFO_SCSV。
+        这是可用的JRE / JDK 6更新22起。RFC 5746在哪里支持重新谈判,包括支持安全的遗产重新谈判,由JVM配置控制。
+      </td>
+    </tr>
+    <tr>
+      <td>ciphers</td>
+      <td>
+         如果指定和使用”,“作为一个分隔符,只列出的密码,将使用SSL支持的实现。
+         使用JSSE密码的密码指定命名约定。所有的特殊价值将使所有支持的密码。
+         这将包括许多不安全。都是仅用于测试目的。<br>
+
+         列表中还可以使用“:”作为分隔符,在这种情况下它将使用OpenSSL语法(见OpenSSL文档密码支持的列表和语法)。
+         这个过滤的行为保持一致的行为OpenSSL 1.0.2中稳定的分支。<br>
+
+         如果没有指定,默认(使用OpenSSL符号) HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5 。<br>
+
+         注意,Java不指定的顺序密码被定义为一个优先顺序排列。看到useServerCipherSuitesOrder。
+      </td>
+    </tr>
+    <tr>
+      <td>clientAuth</td>
+      <td>
+         设置为true如果你想SSL堆栈需要一个有效的证书链从客户机之前接受连接。
+         将希望如果你想SSL堆栈请求客户机证书,但不会失败如果你不是。
+         假值(默认)不需要证书链,除非客户端请求一个资源使用CLIENT-CERT身份验证的安全约束保护的。
+      </td>
+    </tr>
+    <tr>
+      <td>clientCertProvider</td>
+      <td>
+        当客户端证书信息提出了一种非java.security.cert的实例。
+        X509Certificate需要转换之前可以和这个属性控制使用JSSE提供程序是用来执行转换。
+        与 <a href="http://tomcat.apache.org/tomcat-8.0-doc/config/ajp.html" target="_blank" rel="external">AJP连接器</a>,例如使用HTTP连接器和<a href="http://tomcat.apache.org/tomcat-8.0-doc/config/valve.html#SSL_Authenticator_Valve" target="_blank" rel="external">org.apache.catalina.valves.SSLValve</a> APR。如果没有指定,默认提供者将使用。
+      </td>
+    </tr>
+    <tr>
+      <td>crlFile</td>
+      <td>
+        要使用的证书撤销列表来验证客户端证书。
+        如果没有定义,客户端证书将不会对证书撤销列表检查。
+        文件可能被指定使用一个URL,绝对路径或相对路径(CATAINA_BASE)。
+      </td>
+    </tr>
+    <tr>
+      <td>keyAlias</td>
+      <td>
+        别名用于服务器密钥和证书的密钥存储库。
+        如果不指定,第一个键将使用从密钥库读取。
+        键的顺序读取密钥存储库是依赖于实现的。
+        它可能不是从密钥库中读取的,键添加的顺序相同。
+        如果存在多个关键在keystore强烈建议keyAlias配置,以确保使用了正确的关键。
+      </td>
+    </tr>
+    <tr>
+      <td>keyPass</td>
+      <td>
+        密码用于访问指定的密钥存储库文件的服务器证书。默认值是“changeit”。
+      </td>
+    </tr>
+    <tr>
+      <td>keystoreFile</td>
+      <td>
+        他密钥存储库文件的路径名,你有存储加载的服务器证书。
+        默认情况下,路径名是文件”。密钥存储库”操作系统用户的主目录运行Tomcat。
+        如果你keystoreType不需要一个文件使用”“为这个参数(空字符串)。文件可能被指定使用一个URL,绝对路径或相对路径(CATAINA_BASE)。
+      </td>
+    </tr>
+    <tr>
+      <td>keystorePass</td>
+      <td>
+        用于访问指定的密钥存储库文件的密码。默认值为的keyPass属性的值。
+      </td>
+    </tr>
+    <tr>
+      <td>keystoreProvider</td>
+      <td>
+        密钥存储库供应商的名称用于服务器证书。
+        如果不指定,注册供应商列表遍历优先顺序和第一个提供者支持keystoreType使用。
+      </td>
+    </tr>
+    <tr>
+      <td>keystoreType</td>
+      <td>
+        类型的密钥存储库文件用于服务器证书。如果没有指定,默认值是“JKS”。
+      </td>
+    </tr>
+    <tr>
+      <td>sessionCacheSize</td>
+      <td>
+        SSL会话的数量保持在会话缓存。使用0指定无限缓存大小。如果没有指定,默认为0。
+      </td>
+    </tr>
+    <tr>
+      <td>sessionTimeout</td>
+      <td>
+        时间,以秒为单位,建立SSL会话超时。使用0指定无限超时。如果没有指定,默认86400(24小时)。
+      </td>
+    </tr>
+    <tr>
+      <td>sslEnabledProtocols</td>
+      <td>
+        SSL协议的逗号分隔列表支持HTTPS连接。
+        如果指定,只列出了协议,将启用SSL支持的实现。
+        如果没有指定,JVM默认(不含SSLv2的站点时,如果JVM SSLv3默认支持其中的一种或两种)。
+        允许的值可能会从JVM文档获得允许的值SSLSocket.setEnabledProtocols()例如甲骨文Java 7。注意:这个属性之间存在重叠和sslProtocol。
+      </td>
+    </tr>
+    <tr>
+      <td>sslImplementationName</td>
+      <td>
+        使用SSL实现的类名。如果没有指定,默认org.apache.tomcat.util.net.jsse.JSSEImplementation将它封装JVM的缺省使用JSSE提供程序。
+        注意,JVM可以使用不同的JSSE提供程序配置为默认。
+      </td>
+    </tr>
+    <tr>
+      <td>sslProtocol</td>
+      <td>
+        使用SSL协议(s)(一个值可以使多个协议,有关详细信息,请参阅JVM文档)。如果没有指定,默认是TLS。
+        允许的值可能会从JVM文档获得允许的值算法在创建一个如SSLContext实例。甲骨文Java 7。注意:这个属性之间存在重叠和sslEnabledProtocols。
+      </td>
+    </tr>
+    <tr>
+      <td>trustManagerClassName</td>
+      <td>
+        自定义信任管理器类的名称用来验证客户端证书。类必须有一个零参数的构造函数,还必须实现javax.net.ssl.X509TrustManager。
+        如果设置了这个属性,信任存储属性可能被忽略。
+      </td>
+    </tr>
+    <tr>
+      <td>trustMaxCertLength</td>
+      <td>
+        中间的最大数量的证书将被允许当验证客户端证书。如果没有指定,那么将使用默认值5。
+      </td>
+    </tr>
+    <tr>
+      <td>truststoreAlgorithm</td>
+      <td>
+        该算法用于信任库。如果没有指定,默认值返回使用的是javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm()。
+      </td>
+    </tr>
+    <tr>
+      <td>truststoreFile</td>
+      <td>
+        信任存储库文件使用来验证客户端证书。默认的值是javax.net.ssl.trustStore系统属性。
+        如果这个属性和默认设置系统属性,没有信任存储配置。文件可能被指定使用一个URL,绝对路径或相对路径(CATAINA_BASE)。
+      </td>
+    </tr>
+    <tr>
+      <td>truststorePass</td>
+      <td>
+        密码访问信任存储区中。默认的值是javax.net.ssl.trustStorePassword系统属性。如果该属性为空,没有信任存储密码配置。
+        如果指定一个无效的信任存储密码,警告将被记录,将尝试访问信任存储区中没有密码将跳过验证信任存储的内容。
+      </td>
+    </tr>
+    <tr>
+      <td>truststoreProvider</td>
+      <td>
+        信任存储库供应商的名称用于服务器证书。默认的值是javax.net.ssl.trustStoreProvider系统属性。如果该属性为空,keystoreProvider用作默认的值。
+        如果没有这个属性,默认系统属性和keystoreProvideris设置,注册供应商列表遍历优先顺序和第一个支持使用truststoreType提供者。
+      </td>
+    </tr>
+    <tr>
+      <td>truststoreType</td>
+      <td>
+        密钥存储库的类型用于信任存储区中。默认的值是javax.net.ssl.trustStoreType系统属性。
+        如果该属性为空,keystoreType用作默认的值。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <p></p><h4 id="hr42">SSL 支持 - APR/Native</h4><p></p>
-<p></p><p>当APR/Native启用,HTTPS连接器将使用套接字轮询器维生,增加服务器的可伸缩性。<br>    它还使用OpenSSL,这可能是更优化的JSSE取决于所使用的处理器,与许多商业加速器组件,可以补充。<br>    不同于HTTP连接器,HTTPS连接器不能使用sendfile优化静态文件处理。<br><br><br>  APR/Native HTTPS连接器具有相同的属性比APR/Native HTTP连接器,但是增加了OpenSSL特定的。<br>    使用OpenSSL的完整细节,请参阅OpenSSL文档和可用的许多书(<a href="http://www.openssl.org/" target="_blank" rel="external">见OpenSSL官方网站</a>)。APR/Native 连接器的SSL特定属性:</p><p></p>
-<table><br>  <thead><br>    <tr><br>      <th>属性</th><br>      <th>描述</th><br>    </tr><br>  </thead><br>  <tbody><br>    <tr><br>      <td>SSLCACertificateFile</td><br>      <td><br>        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcacertificatefile" target="_blank" rel="external">mod_ssl文档</a><br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCACertificatePath</td><br>      <td><br>        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcacertificatepath" target="_blank" rel="external">mod_ssl文档</a><br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCARevocationFile</td><br>      <td><br>        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcarevocationfile" target="_blank" rel="external">mod_ssl文档</a><br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCARevocationPath</td><br>      <td><br>        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcarevocationpath" target="_blank" rel="external">mod_ssl文档</a><br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCertificateChainFile</td><br>      <td><br>        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcertificatechainfile" target="_blank" rel="external">mod_ssl文档</a><br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCACertificateFile</td><br>      <td><br>        名字的文件,其中包含受信任的证书颁发机构的连接证书。PEM-encoded格式。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCACertificatePath</td><br>      <td><br>        名称的目录,其中包含受信任的证书颁发机构的证书。PEM-encoded格式。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCARevocationFile</td><br>      <td><br>        文件名包含连接认证权威证书撤销列表。PEM-encoded格式。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCARevocationPath</td><br>      <td><br>        的目录名称包含证书颁发机构的证书撤销列表。PEM-encoded格式。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCertificateChainFile</td><br>      <td><br>        名字的文件,其中包含连接certifcates证书颁发机构形成certifcate链为服务器证书。PEM-encoded格式。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCertificateFile</td><br>      <td><br>        文件,其中包含服务器证书的名称。PEM-encoded格式。<br>        除了证书,文件也可以包含可选元素DH参数和/或一个EC曲线名称为短暂的钥匙,分别由openssl dhparam和openssl ecparam。<br>        各自的OpenSSL命令的输出可以被连接到证书文件。这个功能需要4月/本机1.1.34或更高版本。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCertificateKeyFile</td><br>      <td><br>        文件,其中包含的名称服务器私钥。PEM-encoded格式。<br>        默认值是“SSLCertificateFile”的价值,在这种情况下,证书和私钥必须在这个文件中(不推荐)。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLCipherSuite</td><br>      <td><br>        密码可能被用于与客户沟通。默认值是  HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5 有关详细信息,请参阅OpenSSL文档的语法属性。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLDisableCompression</td><br>      <td><br>        禁用压缩如果设置为true,OpenSSL支持禁用压缩。默认是假的,继承了OpenSSL的默认压缩设置。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLHonorCipherOrder</td><br>      <td><br>        设置为true来执行服务器的密码顺序(从SSLCipherSuite设置),而不是允许客户选择密码(默认)。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLPassword</td><br>      <td><br>        短语的加密私钥。如果不提供“SSLPassword”,回调函数应该提示短语。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLProtocol</td><br>      <td><br>        协议的名称与客户交流时的支持。这应该是一个列表的任意组合如下:<br><br>        SSLv2<br>        SSLv3<br>        TLSv1<br>        TLSv1.1<br>        TLSv1.2<br>        all<br>        列表中的每个令牌可以用一个前缀加号(“+”)或一个负号(“-”)。一个加号的协议补充道,一个负号删除它当前的列表形式。建立起一个空列表。<br><br>        所有令牌是一个别名TLSv1 + TLSv1.1 + TLSv1.2。<br><br>        如果不止一个协议指定为一个基于OpenSSL SSLv2Hello安全连接器它永远支持。如果一个协议将不支持SSLv2Hello指定。<br><br>        注意,SSLv2的站点时,SSLv3本质上是不安全的。<br><br>        如果没有指定,那么将使用默认值。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLVerifyClient</td><br>      <td><br>        问客户端证书。默认的是“没有”,这意味着客户端将不会有机会提交一份证书。其他可接受的值包括“可选的”、“需要”和“optionalNoCA”。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLVerifyDepth</td><br>      <td><br>        最大深度为客户端证书验证。默认为“10”。<br>      </td><br>    </tr><br>    <tr><br>      <td>SSLDisableSessionTickets</td><br>      <td><br>        禁用TLS会话使用门票(RFC 4507)如果设置为true。默认是false。<br>      </td><br>    </tr><br>    </tbody><br></table>
+<p></p><p>当APR/Native启用,HTTPS连接器将使用套接字轮询器维生,增加服务器的可伸缩性。
+    它还使用OpenSSL,这可能是更优化的JSSE取决于所使用的处理器,与许多商业加速器组件,可以补充。
+    不同于HTTP连接器,HTTPS连接器不能使用sendfile优化静态文件处理。<br><br>
+  APR/Native HTTPS连接器具有相同的属性比APR/Native HTTP连接器,但是增加了OpenSSL特定的。
+    使用OpenSSL的完整细节,请参阅OpenSSL文档和可用的许多书(<a href="http://www.openssl.org/" target="_blank" rel="external">见OpenSSL官方网站</a>)。APR/Native 连接器的SSL特定属性:</p><p></p>
+<table>
+  <thead>
+    <tr>
+      <th>属性</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SSLCACertificateFile</td>
+      <td>
+        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcacertificatefile" target="_blank" rel="external">mod_ssl文档</a>
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCACertificatePath</td>
+      <td>
+        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcacertificatepath" target="_blank" rel="external">mod_ssl文档</a>
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCARevocationFile</td>
+      <td>
+        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcarevocationfile" target="_blank" rel="external">mod_ssl文档</a>
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCARevocationPath</td>
+      <td>
+        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcarevocationpath" target="_blank" rel="external">mod_ssl文档</a>
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCertificateChainFile</td>
+      <td>
+        查看 <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcertificatechainfile" target="_blank" rel="external">mod_ssl文档</a>
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCACertificateFile</td>
+      <td>
+        名字的文件,其中包含受信任的证书颁发机构的连接证书。PEM-encoded格式。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCACertificatePath</td>
+      <td>
+        名称的目录,其中包含受信任的证书颁发机构的证书。PEM-encoded格式。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCARevocationFile</td>
+      <td>
+        文件名包含连接认证权威证书撤销列表。PEM-encoded格式。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCARevocationPath</td>
+      <td>
+        的目录名称包含证书颁发机构的证书撤销列表。PEM-encoded格式。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCertificateChainFile</td>
+      <td>
+        名字的文件,其中包含连接certifcates证书颁发机构形成certifcate链为服务器证书。PEM-encoded格式。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCertificateFile</td>
+      <td>
+        文件,其中包含服务器证书的名称。PEM-encoded格式。
+        除了证书,文件也可以包含可选元素DH参数和/或一个EC曲线名称为短暂的钥匙,分别由openssl dhparam和openssl ecparam。
+        各自的OpenSSL命令的输出可以被连接到证书文件。这个功能需要4月/本机1.1.34或更高版本。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCertificateKeyFile</td>
+      <td>
+        文件,其中包含的名称服务器私钥。PEM-encoded格式。
+        默认值是“SSLCertificateFile”的价值,在这种情况下,证书和私钥必须在这个文件中(不推荐)。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLCipherSuite</td>
+      <td>
+        密码可能被用于与客户沟通。默认值是  HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5 有关详细信息,请参阅OpenSSL文档的语法属性。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLDisableCompression</td>
+      <td>
+        禁用压缩如果设置为true,OpenSSL支持禁用压缩。默认是假的,继承了OpenSSL的默认压缩设置。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLHonorCipherOrder</td>
+      <td>
+        设置为true来执行服务器的密码顺序(从SSLCipherSuite设置),而不是允许客户选择密码(默认)。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLPassword</td>
+      <td>
+        短语的加密私钥。如果不提供“SSLPassword”,回调函数应该提示短语。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLProtocol</td>
+      <td>
+        协议的名称与客户交流时的支持。这应该是一个列表的任意组合如下:
 
-<p></p><h2 id="hr28">连接器比较</h2><br>    下面是一个小图表,显示了连接器不同。<p></p>
-<table class="defaultTable" style="text-align: center;"><br>      <tbody><tr><br>        <th></th><br>        <th>Java Blocking 连接器<br>BIO</th><br>        <th>Java Nio 连接器<br>NIO</th><br>        <th>Java Nio2 连接器<br>NIO2</th><br>        <th>APR/native 连接器<br>APR</th><br>      </tr><br>      <tr><br>        <th style="text-align: left;">类</th><br>        <td><code class="noHighlight">Http11Protocol</code></td><br>        <td><code class="noHighlight">Http11NioProtocol</code></td><br>        <td><code class="noHighlight">Http11Nio2Protocol</code></td><br>        <td><code class="noHighlight">Http11AprProtocol</code></td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">Tomcat 开始支持的版本</th><br>        <td>3.x </td><br>        <td>6.x </td><br>        <td>8.x </td><br>        <td>5.5.x </td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">支持轮询</th><br>        <td>NO</td><br>        <td>YES</td><br>        <td>YES</td><br>        <td>YES</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">轮询连接大小</th><br>        <td>N/A</td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">读 HTTP Request</th><br>        <td>阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">读 HTTP Body</th><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">写 HTTP Response</th><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">等待下一个请求</th><br>        <td>阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">SSL 支持</th><br>        <td>Java SSL</td><br>        <td>Java SSL</td><br>        <td>Java SSL</td><br>        <td>OpenSSL</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">SSL 握手</th><br>        <td>阻塞的</td><br>        <td>非阻塞的</td><br>        <td>非阻塞的</td><br>        <td>阻塞的</td><br>      </tr><br>      <tr><br>        <th style="text-align: left;">最大连接</th><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>        <td><code class="noHighlight">maxConnections</code></td><br>      </tr><br>    </tbody><br></table>
+        SSLv2
+        SSLv3
+        TLSv1
+        TLSv1.1
+        TLSv1.2
+        all
+        列表中的每个令牌可以用一个前缀加号(“+”)或一个负号(“-”)。一个加号的协议补充道,一个负号删除它当前的列表形式。建立起一个空列表。
+
+        所有令牌是一个别名TLSv1 + TLSv1.1 + TLSv1.2。
+
+        如果不止一个协议指定为一个基于OpenSSL SSLv2Hello安全连接器它永远支持。如果一个协议将不支持SSLv2Hello指定。
+
+        注意,SSLv2的站点时,SSLv3本质上是不安全的。
+
+        如果没有指定,那么将使用默认值。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLVerifyClient</td>
+      <td>
+        问客户端证书。默认的是“没有”,这意味着客户端将不会有机会提交一份证书。其他可接受的值包括“可选的”、“需要”和“optionalNoCA”。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLVerifyDepth</td>
+      <td>
+        最大深度为客户端证书验证。默认为“10”。
+      </td>
+    </tr>
+    <tr>
+      <td>SSLDisableSessionTickets</td>
+      <td>
+        禁用TLS会话使用门票(RFC 4507)如果设置为true。默认是false。
+      </td>
+    </tr>
+    </tbody>
+</table>
+
+<p></p><h2 id="hr28">连接器比较</h2>
+    下面是一个小图表,显示了连接器不同。<p></p>
+<table class="defaultTable" style="text-align: center;">
+      <tbody><tr>
+        <th></th>
+        <th>Java Blocking 连接器<br>BIO</th>
+        <th>Java Nio 连接器<br>NIO</th>
+        <th>Java Nio2 连接器<br>NIO2</th>
+        <th>APR/native 连接器<br>APR</th>
+      </tr>
+      <tr>
+        <th style="text-align: left;">类</th>
+        <td><code class="noHighlight">Http11Protocol</code></td>
+        <td><code class="noHighlight">Http11NioProtocol</code></td>
+        <td><code class="noHighlight">Http11Nio2Protocol</code></td>
+        <td><code class="noHighlight">Http11AprProtocol</code></td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">Tomcat 开始支持的版本</th>
+        <td>3.x </td>
+        <td>6.x </td>
+        <td>8.x </td>
+        <td>5.5.x </td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">支持轮询</th>
+        <td>NO</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">轮询连接大小</th>
+        <td>N/A</td>
+        <td><code class="noHighlight">maxConnections</code></td>
+        <td><code class="noHighlight">maxConnections</code></td>
+        <td><code class="noHighlight">maxConnections</code></td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">读 HTTP Request</th>
+        <td>阻塞的</td>
+        <td>非阻塞的</td>
+        <td>非阻塞的</td>
+        <td>阻塞的</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">读 HTTP Body</th>
+        <td>阻塞的</td>
+        <td>阻塞的</td>
+        <td>阻塞的</td>
+        <td>阻塞的</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">写 HTTP Response</th>
+        <td>阻塞的</td>
+        <td>阻塞的</td>
+        <td>阻塞的</td>
+        <td>阻塞的</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">等待下一个请求</th>
+        <td>阻塞的</td>
+        <td>非阻塞的</td>
+        <td>非阻塞的</td>
+        <td>非阻塞的</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">SSL 支持</th>
+        <td>Java SSL</td>
+        <td>Java SSL</td>
+        <td>Java SSL</td>
+        <td>OpenSSL</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">SSL 握手</th>
+        <td>阻塞的</td>
+        <td>非阻塞的</td>
+        <td>非阻塞的</td>
+        <td>阻塞的</td>
+      </tr>
+      <tr>
+        <th style="text-align: left;">最大连接</th>
+        <td><code class="noHighlight">maxConnections</code></td>
+        <td><code class="noHighlight">maxConnections</code></td>
+        <td><code class="noHighlight">maxConnections</code></td>
+        <td><code class="noHighlight">maxConnections</code></td>
+      </tr>
+    </tbody>
+</table>
       
     </div>
 
@@ -404,10 +1727,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -424,7 +1747,7 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
@@ -434,7 +1757,7 @@
             <div class="site-state-item site-state-tags">
               <a href="/tags">
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">标签</span>
               </a>
             </div>
           
@@ -503,13 +1826,13 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
+    NexT.Pisces
   </a>
 </div>
 
@@ -574,6 +1897,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
